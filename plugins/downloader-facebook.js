@@ -1,20 +1,19 @@
-import fetch from 'node-fetch'
-import { facebookdl, facebookdlv2 } from '@bochilteam/scraper'
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) throw `Masukkan URL Facebook yang ingin di download!\n\nContoh: ${usedPrefix + command} https://www.facebook.com/100009307660961/videos/2850837675236460/`
-    const { result } = await facebookdl(args[0]).catch(async _ => await facebookdlv2(args[0]))
-    for (const { url, isVideo } of result.reverse()) conn.sendFile(m.chat, url, `facebook.${!isVideo ? 'bin' : 'mp4'}`, watermark, m, false, { contextInfo: {
-        externalAdReply: {
-            title: 'Download via web',
-            body: 'Haruno',
-            thumbnail: await(await fetch(image)).buffer(),
-            sourceUrl: url
-        }
-    }})
-}
-handler.help = ['facebook'].map(v => v + ' <url>')
-handler.tags = ['downloader']
+import { facebookDl } from './scraper.js'
+import { savefrom } from '@bochilteam/scraper'
 
-handler.command = /^((facebook|fb)(downloder|dl)?)$/i
+let handler = async (m, { conn, args }) => {
+	if (!args[0]) throw 'Input URL'
+	let res = await facebookDl(args[0]).catch(async _ => await savefrom(args[0])).catch(_ => null)
+	if (!res) throw 'Can\'t download the post'
+	let url = res?.url?.[0]?.url || res?.url?.[1]?.url || res?.['720p'] || res?.['360p']
+	await m.reply('_In progress, please wait..._')
+	conn.sendMessage(m.chat, { video: { url }, caption: res?.meta?.title || '' }, { quoted: m })
+}
+handler.help = ['facebook']
+handler.tags = ['downloader']
+handler.alias = ['fb', 'fbdl', 'facebook', 'facebookdl']
+handler.command = /^((facebook|fb)(dl)?)$/i
 
 export default handler
+
+// CREDIT: https://github.com/Rlxfly/re-md
