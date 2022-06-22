@@ -1,5 +1,5 @@
 import { execSync } from 'child_process'
-import { reload } from '../lib/connection.js'
+import { reload } from '../lib/plugins.js'
 import fs from 'fs'
 let handler = async (m, { conn, text, isROwner }) => {
   if (conn.user.jid == conn.user.jid) {

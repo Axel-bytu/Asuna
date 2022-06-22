@@ -1,4 +1,4 @@
-import { facebookDl } from './scraper.js'
+import { facebookDl } from './scrape.js'
 import { savefrom } from '@bochilteam/scraper'
 
 let handler = async (m, { conn, args }) => {
