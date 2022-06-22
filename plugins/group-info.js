@@ -40,7 +40,7 @@ Demote: ${sDemote}
             {
                 urlButton: {
                     displayText: 'Copy group ID',
-                    url: 'https://wwww.whatsapp.com/otp/copy/' + groupMetadata.id
+                    url: 'https://www.whatsapp.com/otp/copy/' + groupMetadata.id
                 }
             }
         ]
