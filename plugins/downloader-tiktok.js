@@ -1,8 +1,8 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, text, usedPrefix }) => {
-	if (!text) throw 'Input URL' 
-	if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) throw 'Invalid URL'
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+	if (!text) throw `Masukkan URL tiktok yang ingin didownload!\n\nContoh: ${usedPrefix + command} https://vt.tiktok.com/ZSe5pocWX/` 
+	if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) throw 'Invalid URL!\nPastikan URL merupakan URL tiktok.'
 	let url = (await fetch(text)).url
 	let res = await (await fetch(`https://api2.musical.ly/aweme/v1/aweme/detail/?aweme_id=${url.split('?')[0].split('/')[5]}`)).json()
 	let data = res.aweme_detail.video.play_addr.url_list
@@ -10,8 +10,8 @@ let handler = async (m, { conn, text, usedPrefix }) => {
 	let meta = await getInfo(url).catch(_ => {})
 	await m.reply('_In progress, please wait..._')
 	let buttons = [{ buttonText: { displayText: 'Audio' }, buttonId: `${usedPrefix}tomp3` }]
-	conn.sendMessage(m.chat, { video: { url: data[data.length - 1] }, caption: meta?.description || null, footer: await shortUrl(data[data.length - 1]), buttons }, { quoted: m })
-	// conn.sendMessage(m.chat, { video : { url: res.link }, caption: description }, { quoted: m })
+	// conn.sendMessage(m.chat, { video: { url: data[data.length - 1] }, caption: meta?.description || null, footer: await shortUrl(data[data.length - 1]), buttons }, { quoted: m })
+	conn.sendMessage(m.chat, { video : { url: res.link }, caption: watermark }, { quoted: m })
 }
 handler.help = ['tiktok']
 handler.tags = ['downloader']

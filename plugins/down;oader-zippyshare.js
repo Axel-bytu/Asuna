@@ -1,10 +1,10 @@
 import { extract } from 'zs-extract'
 import { lookup } from 'mime-types'
 
-let handler = async (m, { conn, args }) => {
-  if (!args[0]) throw 'Input URL'
-  if (!args[0].includes('zippyshare.com')) throw 'Invalid URL'
-  await m.reply('_In progress, please wait..._')
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+  if (!args[0]) throw `Masukkan URL zippyshare yang ingin didownload.\n\nContoh: ${usedPrefix + command} https://otakudesu.watch/episode/seibu-yaro-girl-episode-5-sub-indo/`
+  if (!args[0].includes('zippyshare.com')) throw 'Invalid URL!\nPastikan URL merupakan URL zippyshare.'
+  await m.reply(wait)
   for (let i = 0; i < args.length; i++) {
     if (!args[i].includes('zippyshare.com/v')) continue
     let res = await extract(args[i])
@@ -14,7 +14,6 @@ let handler = async (m, { conn, args }) => {
 }
 handler.help = ['zippyshare']
 handler.tags = ['downloader']
-handler.alias = ['zs', 'zippy', 'zippydl', 'zippyshare']
 handler.command = /^z(s|ippy(dl|share)?)$/i 
 
 export default handler
