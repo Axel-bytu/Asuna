@@ -15,7 +15,7 @@ handler.tags = ['internet']
 
 handler.command = /^brainly$/i
 
-module.exports = handler
+export default handler
 
 function formatTags(str) {
   let tagRegex = /<(.+?)>((?:.|\n)*?)<\/\1>/gi
