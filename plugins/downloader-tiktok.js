@@ -1,3 +1,4 @@
+import fetch from 'node-fetch'
 import { tiktokdl, tiktokdlv2 } from '@bochilteam/scraper'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0]) throw `Harap masukkan URL sebagai parameter!\n\nContoh: ${usedPrefix + command} https://vt.tiktok.com/ZSe5pocWX/`

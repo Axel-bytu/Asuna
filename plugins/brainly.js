@@ -1,6 +1,6 @@
 import { Brainly } from 'brainly-scraper-v2'
 const brainly = new Brainly('id')
-let handler = async function (m, { text }) {
+let handler = async function (m, { text, usedPrefix, command }) {
     if (!text) throw `Harap masukkan soal yang ingin dicari.\n\nContoh: ${usedPrefix + command} Pak Rusdi memberikan iPhone kepada Dek Latifa, Apakah Latifa akan menerimanya dengan segala konsekuensi nya?`
   let res = await brainly.search('id', text)
   let answer = res.map(({ question, answers }, i) => `

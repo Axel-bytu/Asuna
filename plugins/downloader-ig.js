@@ -1,3 +1,4 @@
+import fetch from 'node-fetch'
 import { instagramdl, instagramdlv2, instagramdlv3, instagramdlv4 } from '@bochilteam/scraper'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0]) throw `Harap masukkan URL instagram yang ingin didownload.\n\nContoh: ${usedPrefix + command} https://www.instagram.com/p/CfDVJyOPsqF/?utm_source=ig_web_copy_link`

@@ -1,6 +1,8 @@
+import db from '../lib/database.js'
 import { xpRange } from '../lib/levelling.js'
 import { promises } from 'fs'
 import { join } from 'path'
+import { plugins } from '../lib/plugins.js'
 import fetch from 'node-fetch'
 import moment from 'moment-timezone'
 const defaultMenu = {
