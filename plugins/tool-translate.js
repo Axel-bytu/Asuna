@@ -1,4 +1,4 @@
-import translate from 'trannslate-google-api'
+import translate from 'translate-google-api'
 const defaultLang = 'en'
 const tld = 'cn'
 

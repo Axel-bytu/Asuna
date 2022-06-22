@@ -1,5 +1,4 @@
 import { googleIt } from '@bochilteam/scraper'
-import { usage } from 'yargs'
 let handler = async (m, { conn, command, args, usedPrefix }) => {
     const fetch = (await import('node-fetch')).default
     let full = /f$/i.test(command)
