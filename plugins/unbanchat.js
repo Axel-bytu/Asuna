@@ -1,7 +1,7 @@
 import db from '../lib/database.js'
 
 let handler = async (m, { conn }) => {
-    let name = conn.getName(m.chat)
+    let name = await conn.getName(m.chat)
     db.data.chats[m.chat].isBanned = false
     m.reply(`*${conn.getName(conn.user.jid)}* aktif di chat ${name}`)
 }

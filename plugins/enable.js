@@ -1,3 +1,4 @@
+// TODO: Cleaning the message
 import db from '../lib/database.js'
 
 let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {

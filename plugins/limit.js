@@ -1,3 +1,5 @@
+// TODO: Make a canvas template
+
 import db from '../lib/database.js'
 
 let handler = async (m, { conn }) => {
