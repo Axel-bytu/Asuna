@@ -1,11 +1,11 @@
 import { spawn } from 'child_process';
 let handler = async (m, { conn }) => {
   if (!process.send) throw 'Dont: node main.js\nDo: node index.js'
-  if (global.conn.user.jid == conn.user.jid) {
+  if (conn.user.jid == conn.user.jid) {
     await m.reply('Sedang merestart bot...')
     await global.db.write()
     process.send('reset')
-  } else throw 'Error. Tempat run tidak mendukung fitur debounce.'
+  } else throw 'Error.'
 }
 handler.help = ['debounce' + (process.send ? '' : ' (Tidak Bekerja)')]
 handler.tags = ['host']
