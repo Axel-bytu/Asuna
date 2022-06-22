@@ -30,14 +30,16 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'wa.me/6285713964963'
-global.author = 'Metro Bot'
+global.packname = 'Haruno'
+global.author = 'Fadli'
 
 // Haruno global
-global.image = ''
+global.image = 'https://telegra.ph/file/0eb764fc1b4fd2bc2b968.jpg'
 global.watermark = '© Haruno'
 global.wait = '「 ⏱️ 」Harap tunggu...'
 global.multiplier = 59 // The higher, The harder levelup
+global.source = 'https://youtu.be/pgCNibhSYsY'
+global.pic =  ['https://telegra.ph/file/f96d9fdebba8eaa08ba7b.jpg', 'https://telegra.ph/file/67ae7747903d9b45a7427.jpg', 'https://telegra.ph/file/5d8c2f2797cb067ef887c.jpg', 'https://telegra.ph/file/07f09ce47a07c187b1d79.jpg', 'https://telegra.ph/file/456bdf2f852674b3fdb18.jpg', 'https://telegra.ph/file/96bfbbe091aa5523c7150.jpg', 'https://telegra.ph/file/7644617a4ad58d8d6f0e2.jpg']
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
