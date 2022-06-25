@@ -17,7 +17,7 @@ let handler = async (m, { conn }) => {
     let data = `
 Limit: ${user.limit}
 EXP: ${user.exp}
-Lebel: ${user.level}
+Level: ${user.level}
 `.trim()
     let caption = `
 Limit: *${user.limit}*
