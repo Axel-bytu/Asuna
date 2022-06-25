@@ -9,7 +9,7 @@ let handler = async (m, { conn }) => {
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
     else who = m.sender
     let user = db.data.users[who]
-    let opts = db.data.settings[conn.user.jid].canvas
+    // let opts = db.data.settings[conn.user.jid].canvas
     let name = conn.getName(who)
     let about = (await conn.fetchStatus(who).catch(console.error) || {}).status || 'Hey there! I\'m using Haruno!'
     let desc = about.replace(/(?![^\n]{1,32}$)([^\n]{1,32})\s/g, '$1\n')

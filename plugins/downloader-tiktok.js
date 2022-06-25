@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 	let data = res.aweme_detail.video.play_addr.url_list
 	if (!data.length) throw 'Can\'t download video!'
 	let meta = await getInfo(url).catch(_ => {})
-	await m.reply('_In progress, please wait..._')
+	m.reply(wait)
 	let buttons = [{ buttonText: { displayText: 'Audio' }, buttonId: `${usedPrefix}tomp3` }]
 	// conn.sendMessage(m.chat, { video: { url: data[data.length - 1] }, caption: meta?.description || null, footer: await shortUrl(data[data.length - 1]), buttons }, { quoted: m })
 	conn.sendMessage(m.chat, { video : { url: res.link }, caption: watermark }, { quoted: m })

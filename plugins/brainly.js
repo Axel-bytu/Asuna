@@ -13,7 +13,7 @@ let handler = async (m, { conn, text }) => {
 ${v.content}${v.attachments.length > 0 ? `\n*Media Url*: ${v.attachments.join(', ')}` : ''}`).join``}`).join('\n' + '-'.repeat(45))
 		m.reply(answer.trim())
 }
-handler.help = handler.alias = ['brainly']
+handler.help = ['brainly']
 handler.tags = ['tools']
 handler.command = /^(brainly)$/i
 
