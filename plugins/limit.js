@@ -1,7 +1,7 @@
 // TODO: Make a canvas template
 
 import db from '../lib/database.js'
-import { createCanvas, loadImage, registerFont } from 'canvas'
+const { createCanvas, loadImage, registerFont } = (await import('canvas')).default
 import path from 'path'
 
 let handler = async (m, { conn }) => {
