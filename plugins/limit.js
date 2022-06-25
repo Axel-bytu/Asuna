@@ -34,9 +34,7 @@ Joincount: *${user.joincount}*
         pp = await conn.profilePictureUrl(who, 'image')
     } catch (e) {
     }
-    if (!opts) {
-        await conn.sendFile(m.chat, pp, 'pp.jpg', caption, m)
-    } else {
+        // await conn.sendFile(m.chat, pp, 'pp.jpg', caption, m)
         const canvas = createCanvas(1280, 610)
         const ctx = canvas.getContext('2d')
 
@@ -79,7 +77,6 @@ Joincount: *${user.joincount}*
         ctx.fillText("Haruno", 128, 436)
         ctx.restore()
         await conn.sendFile(m.chat, canvas.toBuffer(), 'canvas.jpg', caption, m)
-    }
 }
 handler.help = ['my [@62XXXX]']
 handler.tags = ['xp']
