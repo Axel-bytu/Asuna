@@ -13,6 +13,7 @@ let handler = async (m, { conn, args }) => {
     let tgl = d.toLocaleDateString('id-Id')
     let hari = d.toLocaleDateString('id-Id', { weekday: 'long' })
     let teks = args.join` `
+    let ftext = teks.replace(/(?![^\n]{1,60}$)([^\n]{1,60})\s/g, '$1\n')
     // conn.reply(m.chat, util.format({fontPath, inputPath, outputPath, tgl, hari, teks}), m)
     let bufs = []
     const [_spawnprocess, ..._spawnargs] = [...(global.support.gm ? ['gm'] : global.support.magick ? ['magick'] : []),
@@ -56,7 +57,7 @@ let handler = async (m, { conn, args }) => {
         '-7.5',
         '-annotate',
         '+344+142',
-        teks,
+        ftext,
         'jpg:-'
     ]
     spawn(_spawnprocess, _spawnargs)

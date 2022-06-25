@@ -1,7 +1,22 @@
-function handler(m) {
-  const data = global.owner.filter(([id, isCreator]) => id && isCreator)
-  let cont = this.sendContact(m.chat, data.map(([id, name]) => [id, name]), m)
-  this.reply(m.chat, 'Nomor *owner* itu bukan nomor bot.\nHarap pengertian nya nggak ngechat command bot ke nomer owner. Makasih.', cont)
+import PhoneNumber from 'awesome-phonenumber'
+let handler = async(m, { conn }) => {
+    let nomor = owner[0][0]
+    let number = nomor + '@s.whatsapp.net'
+    let biz = await conn.getBusinessProfile(number)
+
+    let vcard = `
+    BEGIN:VCARD
+    VERSION:3.0
+    N:;Fadli;;;
+    FN:Fadli
+    ORG:Haruno Corp
+    TEL;type=CELL;type=VOICE;waid=${nomor}:${PhoneNumber('+' + nomor).getNumber('international')}
+    X-WA-BIZ-NAME:Fadli
+    X-WA-BIZ-DESCRIPTION:${biz.description.replace(/\n/g, '\\n')}
+    END:VCARD
+    `.trim()
+    let kont = await conn.sendMessage(m.chat, { contacts: { displayName: 'Fadli', contacts: [{vcard}]}}, { quoted: m})
+    conn.reply(m.chat, 'Nomor owner itu bukan bot, tidak usah chat command bot.\nChat yang sopan kalau belum dibales ya jangan spam. Makasih', kont)
 }
 handler.help = ['owner', 'creator']
 handler.tags = ['info']
