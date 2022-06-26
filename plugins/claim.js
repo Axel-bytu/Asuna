@@ -15,4 +15,4 @@ handler.help = ['daily', 'claim']
 handler.tags = ['xp']
 handler.command = /^(daily|claim)$/i
 
-module.exports = handler
+export default handler
