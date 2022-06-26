@@ -2,6 +2,7 @@
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 process.on('uncaughtException', console.error)
+NODE_OPTIONS="--max-old-space-size=8192"
 
 import './config.js';
 import { join } from 'path'
