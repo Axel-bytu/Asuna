@@ -6,7 +6,7 @@ let handler = async(m, { conn }) => {
     if (user.claimed) {
         throw `Kamu sudah claim hari ini.\nClaim lagi besok hari.\n\nData claim akan diriset setiap jam 04:00 WIB.`
     } else {
-        hec = user.level
+        let hec = user.level
         if (user.level === 0) {
             hec = 1
         }

@@ -31,7 +31,7 @@ let handler = async (m, { conn }) => {
     while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
     if (before !== user.level) {
         let rank = await new canvacord.Rank()
-            .setRank(usersLevel.indexOf(m.sender) + 1)
+            .setRank(user.level + 1)
             .setAvatar(pp)
             .setLevel(user.level)
             .setCurrentXP(user.exp - min)
