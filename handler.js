@@ -88,6 +88,8 @@ export async function handler(chatUpdate) {
                     user.bookmark = []
                 if (!('claimed' in user))
                     user.claimed = false
+                if (!('firstchat' in user))
+                    user.firstchat = false
             } else
                 db.data.users[m.sender] = {
                     exp: 0,
@@ -111,6 +113,7 @@ export async function handler(chatUpdate) {
                     joincount: 0,
                     bookmark: [],
                     claimed: false,
+                    firstchat: false,
                 }
             let chat = db.data.chats[m.chat]
             if (typeof chat !== 'object')
@@ -516,7 +519,7 @@ export async function participantsUpdate({ id, participants, action }) {
                         this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: [user], contextInfo: {
                             externalAdReply: {
                                 title: action === 'add' ? wel : lea,
-                                body: watermark,
+                                body: 'Haruno',
                                 thumbnail: await(await fetch(global.image)).buffer(),
                                 sourceUrl: source
                             }

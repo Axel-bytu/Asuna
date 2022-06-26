@@ -3,8 +3,8 @@ import { Brainly } from 'brainly-scraper-v2'
 import fetch from 'node-fetch'
 let brainly = new Brainly('id')
 
-let handler = async (m, { conn, text }) => {
-	if (!text) throw 'Input Query'
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+	if (!text) throw `Masukkan soal yang mau dicari.\n\nContoh: ${ usedPrefix + command } Tentukan luas dari bagian yang diarsir`
 	let res = await brainly.search(text, 'id').catch(() => null)
 	console.log(res)
 		let answer = res.map(({ question, answers }, i) => `
