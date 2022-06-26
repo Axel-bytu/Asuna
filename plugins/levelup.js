@@ -6,7 +6,7 @@ let handler = async (m, { conn }) => {
     let who = m.sender
     let pp = global.image
     let user = db.data.users[who]
-    let discriminator = who.substring(9, 13)
+    let discriminator = who.substring(0, 4)
     let { min, xp, max } = xpRange(user.level, global.multiplier)
     try {
         pp = await conn.getProfilePicture(who)

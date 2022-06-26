@@ -11,6 +11,7 @@ let handler = async(m, { conn }) => {
             hec = 1
         }
         user.exp += daily * hec
+        user.claimed = true
         throw `*+${daily * hec} XP*\n\nSemakin tinggi level semakin banyak XP yang didapat.`
     }
 }
