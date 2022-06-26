@@ -24,7 +24,7 @@ let handler = async (m, { conn }) => {
             .setDiscriminator(discriminator)
         rank.build()
         .then(async data => {
-            await conn.sendButton(m.chat, `Level *${user.level} (${user.exp - min}/${xp})*\nKurang *${max - user.exp}* lagi!`.trim(), watermark, data, [['Daily', '.claim']], m)
+            await conn.sendButton(m.chat, `Level *${user.level} (${user.exp - min}/${xp})*\nKurang *${max - user.exp}* lagi!`.trim(), watermark, data, [['Daily', '.claim']], m, { thumbnail: data, height: 282, width: 934 })
         })
     }
     let before = user.level * 1
@@ -41,7 +41,7 @@ let handler = async (m, { conn }) => {
             .setDiscriminator(discriminator)
         rank.build()
         .then(async data => {
-            await conn.sendButton(m.chat, `_*Level Up!*_\n_${before}_ -> _${user.level}_`.trim(), watermark, data, [['Daily', '.claim']], m)
+            await conn.sendButton(m.chat, `_*Level Up!*_\n_${before}_ -> _${user.level}_`.trim(), watermark, data, [['Daily', '.claim']], m, { thumbnail: data, height: 282, width: 934 })
         })
     }
 }
