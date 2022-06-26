@@ -6,8 +6,12 @@ let handler = async(m, { conn }) => {
     if (user.claimed) {
         throw `Kamu sudah claim hari ini.\nClaim lagi besok hari.\n\nData claim akan diriset setiap jam 04:00 WIB.`
     } else {
-        user.exp += daily * user.level
-        throw `*+${daily * user.level} XP*\n\nSemakin tinggi level semakin banyak XP yang didapat.`
+        hec = user.level
+        if (user.level === 0) {
+            hec = 1
+        }
+        user.exp += daily * hec
+        throw `*+${daily * hec} XP*\n\nSemakin tinggi level semakin banyak XP yang didapat.`
     }
 }
 

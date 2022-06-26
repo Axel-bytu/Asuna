@@ -8,18 +8,13 @@ let handler = async (m, { conn }) => {
     let user = db.data.users[who]
     let discriminator = who.substring(9, 13)
     let { min, xp, max } = xpRange(user.level, global.multiplier)
-    let users = Object.entries(db.data.users).map(([key, value]) => {
-        return { ...value, jid: key }
-    })
-    let sortedLevel = users.map(toNumber('level')).sort(sort('level'))
-    let usersLevel = sortedLevel.map(enumGetKey)
     try {
         pp = await conn.getProfilePicture(who)
     } catch (e) {
     }
     if (!canLevelUp(user.level, user.exp, global.multiplier)) {
         let rank = await new canvacord.Rank()
-            .setRank(usersLevel.indexOf(m.sender) + 1)
+            .setRank(user.level + 1)
             .setAvatar(pp)
             .setLevel(user.level)
             .setCurrentXP(user.exp - min)
