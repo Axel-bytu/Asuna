@@ -9,7 +9,7 @@ let handler = async (m, { conn }) => {
     let discriminator = who.substring(0, 4)
     let { min, xp, max } = xpRange(user.level, global.multiplier)
     try {
-        pp = await conn.getProfilePicture(who)
+        pp = await conn.profilePictureUrl(who, 'image')
     } catch (e) {
     }
     if (!canLevelUp(user.level, user.exp, global.multiplier)) {
