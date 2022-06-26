@@ -58,9 +58,6 @@ let handler = async (m, { conn, args }) => {
     spawn(_spawnprocess, _spawnargs)
         .on('error', e => m.reply(format(e)))
         .on('close', () => {
-            if (ftext.length > 1637) {
-                throw `Jumah karakter melebihi *1637* karakter.\nHanya 1637 karakter pertama yang akan ditulis.`
-            }
             conn.sendFile(m.chat, Buffer.concat(bufs), 'nulis.jpg', watermark, m)
         })
         .stdout.on('data', chunk => bufs.push(chunk))
