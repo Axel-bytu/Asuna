@@ -76,7 +76,7 @@ Joincount: *${user.joincount}*
         ctx.restore()
         await conn.sendFile(m.chat, canvas.toBuffer(), 'canvas.jpg', caption, m)
 }
-handler.help = ['my [@62XXXX]']
+handler.help = ['profile [@62XXXX]']
 handler.tags = ['xp']
-handler.command = /^(my|limit)$/i
+handler.command = /^(my|limit|profile)$/i
 export default handler
