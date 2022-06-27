@@ -34,7 +34,7 @@ async function facebookDl(url) {
 	return result
 }
 
-function tiktok(url) {
+async function tiktok(url) {
     return new Promise(async (resolve, reject) => {
         axios.get('https://ttdownloader.com/', {
             headers: {
