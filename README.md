@@ -1,89 +1,39 @@
-# Games-Wabot
+# Haruno
+<a href = "https://github.com/FadliDarmawan/haruno-md/blob/main/updatePatch/CHANGELOG"><img src = "https://telegra.ph/file/831188003a6180c72c38b.png">
 
-<a href="https://github.com/BochilGaming/games-wabot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/BochilGaming/games-wabot?label=Forks&color=blue&style=flat-square"></a>
-<a href="https://github.com/BochilGaming/games-wabot/watchers"><img title="Watchers" src="https://img.shields.io/github/watchers/BochilGaming/games-wabot?label=Watchers&color=green&style=flat-square"></a>
-<a href="https://github.com/BochilGaming/games-wabot/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/BochilGaming/games-wabot?label=Stars&color=yellow&style=flat-square"></a>
-<a href="https://github.com/BochilGaming/games-wabot/graphs/contributors"><img title="Contributors" src="https://img.shields.io/github/contributors/BochilGaming/games-wabot?label=Contributors&color=blue&style=flat-square"></a>
-<a href="https://github.com/BochilGaming/games-wabot/issues"><img title="Issues" src="https://img.shields.io/github/issues/BochilGaming/games-wabot?label=Issues&color=success&style=flat-square"></a>
-<a href="https://github.com/BochilGaming/games-wabot/issues?q=is%3Aissue+is%3Aclosed"><img title="Issues" src="https://img.shields.io/github/issues-closed/BochilGaming/games-wabot?label=Issues&color=red&style=flat-square"></a>
-<a href="https://github.com/BochilGaming/games-wabot/pulls"><img title="Pull Request" src="https://img.shields.io/github/issues-pr/BochilGaming/games-wabot?label=PullRequest&color=success&style=flat-square"></a>
-<a href="https://github.com/BochilGaming/games-wabot/pulls?q=is%3Apr+is%3Aclosed"><img title="Pull Request" src="https://img.shields.io/github/issues-pr-closed/BochilGaming/games-wabot?label=PullRequest&color=red&style=flat-square"></a>
+## Version 3.0 is Out!
+Dont forget to read the changelog.
 
+<a href = "https://github.com/FadliDarmawan/haruno-md"><img src = "https://cardivo.vercel.app/api?name=Haruno&description=Haruno,%20Bot%20WhatsApp%20multi%20device.%20Created%20by%20Nurutomo,%20BochilGaming,%20dan%20FadliDarmawan.&image=https://telegra.ph/file/196b5f6f24ccdc6805021.jpg?cb=20200606024545&usqp=CAU&usqp=CAU&backgroundColor=%23ecf0f1&github=FadliDarmawan&pattern=topography&colorPattern=%23eaeaea"/><a>
 
-## Join Group Diskusi
-[![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/GVwpKf83s42D1CnIfDW19G) 
-**NO BOT**
+### Group Official Haruno
+[![Grup WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/Dqdjz7aSWJj0IyORAsdYom)
 
+### Deploy to Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/FadliDarmawan/haruno-md)
 
-#### Deploy to Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BochilGaming/games-wabot)
+<p align = "left">
+      <img src = "https://telegra.ph/file/196b5f6f24ccdc6805021.jpg" width="35%" style="margin-left: auto;margin-right: auto;display: block;">
+</p>
 
-#### Heroku Buildpack
-| BuildPack | LINK |
-|--------|--------|
-| **FFMPEG** |[here](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
-| **IMAGEMAGICK** | [here](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
+## Donate and Support me
 
-### FOR TERMUX USER
-1. Type mentioned below given commands one by one in Termux.
-```sh
-$ pkg upgrade && pkg update
-$ pkg install git -y
-$ pkg install nodejs -y
-$ pkg install ffmpeg -y
-$ pkg install imagemagick -y
-$ git clone https://github.com/BochilGaming/games-wabot -b multi-device
-$ cd games-wabot
-$ npm i 
-```
-If error try using yarn instead of npm, see [here](https://github.com/BochilGaming/games-wabot/tree/multi-device#if-npm-install-failed--try--using-yarn-instead-of-npm)
-```sh
-$ node .
-```
-2. Wait for bot starting...
-3. Scan QR code from 2nd device. (Go to whatsapp > Linked Devices > Join `Multi Device Beta` > Click on `link device`)
-4. Now your bot is ready to rock n roll.
+Donate me via [`Saweria!`](https://saweria.co/FadliStudio)
 
-#### If npm install failed, try using yarn instead of npm
-```sh
-$ pkg install yarn -y
-$ yarn install
-```
----------
-
-## INSTALL ON TERMUX WITH UBUNTU
-
-[ INSTALLING UBUNTU ]
-
+## FOR TERMUX USER
 ```bash
-apt update && apt full-upgrade
-apt install wget curl git proot-distro
-proot-distro install ubuntu
-echo "proot-distro login ubuntu" > $PREFIX/bin/ubuntu
-ubuntu
-```
----------
-
-[ INSTALLING REQUIRED PACKAGES ]
-
-```bash
-ubuntu
-apt update && apt full-upgrade
-apt install wget curl git ffmpeg imagemagick build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev dbus-x11 ffmpeg2theora ffmpegfs ffmpegthumbnailer ffmpegthumbnailer-dbg ffmpegthumbs libavcodec-dev libavcodec-extra libavcodec-extra58 libavdevice-dev libavdevice58 libavfilter-dev libavfilter-extra libavfilter-extra7 libavformat-dev libavformat58 libavifile-0.7-bin libavifile-0.7-common libavifile-0.7c2 libavresample-dev libavresample4 libavutil-dev libavutil56 libpostproc-dev libpostproc55 graphicsmagick graphicsmagick-dbg graphicsmagick-imagemagick-compat graphicsmagick-libmagick-dev-compat groff imagemagick-6.q16hdri imagemagick-common libchart-gnuplot-perl libgraphics-magick-perl libgraphicsmagick++-q16-12 libgraphicsmagick++1-dev
-```
-
----------
-
-[ INSTALLING NODEJS & GAMES-WABOT ]
-
-```bash
-ubuntu
-curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
-apt install -y nodejs gcc g++ make
-git clone https://github.com/BochilGaming/games-wabot -b multi-device
-cd games-wabot
-npm install
-npm update
+pkg update && pkg upgrade
+pkg install git
+pkg install nodejs
+pkg install ffmpeg
+pkg install imagemagick
+pkg install yarn
+git clone https://github.com/FadliDarmawan/haruno-md
+cd haruno-md
+yarn
+npm i -g typescript
+tsc -p ./node_modules/@adiwajshing/baileys
+node .
 ```
 
 ---------
@@ -96,11 +46,32 @@ npm update
 * Download And Install ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
 
 ```bash
-git clone https://github.com/BochilGaming/games-wabot -b multi-device
-cd games-wabot
+git clone https://github.com/FadliDarmawan/haruno-md
+cd haruno-md
 npm install
 npm update
+npm index
 ```
+
+---------
+
+## FOR HEROKU USER
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/FadliDarmawan/haruno-md)
+
+### Installing buildpack
+* heroku/nodejs
+* https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
+https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git
+
+
+### Connecting the Heroku Into Mogodb
+
+Note: You dont have to connect your Haruno at Heroku into mongoDB, but Heroku doesn save your ```database.json``` and you will lose your bot data every time you restart or re-run the bot.
+
+* Create account and database in mongodb atlas [`watch here`](https://youtu.be/rPqRyYJmx2g)
+* when you already have a database, you just need to take mongourl
+* Put mongourl in Procfile `web: node . --db 'mongourl'`
+* Example `web: node . -- db 'mongodb+srv://ilman:<password>@cluster0.iiede.mongodb.net/ShiraoriBOT?retryWrites=true&w=majority'`
 
 ---------
 
@@ -165,14 +136,9 @@ No bot, just print received messages and add users to database
 
 **Development** Testing Mode
 
-### `--db`
-
-pass mongodb url or cloud url to connect to database, by the default it will connect to database.json
-
 ---------
 
-## FAQ
-- How to send button image?
+## How To Customise Message Display
 ```js
 // Syntax
 conn.sendButton(
@@ -195,67 +161,10 @@ conn.sendButton(m.chat, 'Hello world!', '@BochilGaming', 'https://github.com/Boc
       null, { asLocation: true }
 )
 ```
-
-- Why my plugins not working in this multi-device?
-      
-> Please cek syntax error on your plugins. and maybe your script still using CJS
-> This multi-device script use ESM and CJS [(legacy code)](https://github.com/BochilGaming/games-wabot/tree/main) not support yet. Learn more about [ESM](https://nodejs.org/api/esm.html)
-
-- How to delete session?
-
-> You can delete folder `sessions` or run command ```rm -rf sessions```
-
-- Why i can't scan qr code?
-
-> if your error like this ```(node:7016) UnhandledPromiseRejectionWarning: TypeError [ERR_INVALID_ARG_TYPE]: The "key" argument must be of type string or an instance of Buffer, TypedArray, DataView, or KeyObject. Received undefined``` you can use [multi-device branch](https://github.com/BochilGaming/games-wabot/tree/multi-device)
-
-- How to change owner number?
-
-> You can change in `config.js`, on global.owner. make sure you use correct syntax.
-```js
-global.owner = [
-  ['6281319944687', 'BG', true]
-]
-```
-> First argument on array is number like `6281319944687`, second argument is name like `BG` (if this argument pass, if using `owner` command, this number will send as owner), third argument is developer like `true` (if this argument pass, if there have plugins error (not syntax error) the error will send to developer)
----------
-
-### want to contribute?
-1. fork this repository
-2. Change/edit/create what you want. for example you can add features, fix bug, etc
-3. **test** before making a pull req!!
-4. make a pull req!
-5. if your pull req is already in **acc/merge**, you can delete your branch or you can create pull req again :)
-
 ---------
 
 
-### Thanks To 
-**Allah SWT**,
-
-**Orang Tua**,
-
-**Semua yang selalu mendukung**
-
-
-#### Special Thanks to
-[![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo)
-[![BochilGaming](https://github.com/BochilGaming.png?size=100)](https://github.com/BochilGaming)
-
-#### Contributor
-[![Adiixyz](https://github.com/Adiixyz.png?size=100)](https://github.com/Adiixyz)
-[![idhamthoriqbot](https://github.com/idhamthoriqbot.png?size=100)](https://github.com/idhamthoriqbot)
-[![BlueShiYT](https://github.com/BlueShiYT.png?size=100)](https://github.com/BlueShiYT)
-[![zatu22](https://github.com/zatu22.png?size=100)](https://github.com/zatu22)
-[![unx21](https://github.com/unx21.png?size=100)](https://github.com/unx21)
-[![botstylee](https://github.com/botstylee.png?size=100)](https://github.com/botstylee)
-[![Jauhariq](https://github.com/Jauhariq.png?size=100)](https://github.com/Jauhariq)
-[![Nobuyaki](https://github.com/Nobuyaki.png?size=100)](https://github.com/Nobuyaki)
-[![Aiinne](https://github.com/Aiinne.png?size=100)](https://github.com/Aiinne)
-[![arisawali2014](https://github.com/arisawali2014.png?size=100)](https://github.com/arisawali2014)
-[![ryznxx](https://github.com/ryznxx.png?size=100)](https://github.com/ryznxx)
-[![ZeroChanBot](https://github.com/ZeroChanBot.png?size=100)](https://github.com/ZeroChanBot)
-[![Bintangp02](https://github.com/Bintangp02.png?size=100)](https://github.com/Bintangp02)
-[![itsmeR1F4I](https://github.com/itsmeR1F4I.png?size=100)](https://github.com/itsmeR1F4I)
-[![DineshValor](https://github.com/DineshValor.png?size=100)](https://github.com/DineshValor)
-[![TeamMars20](https://github.com/TeamMars20.png?size=100)](https://github.com/TeamMars20)
+ [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo) | [![Istikmal](https://github.com/BochilGaming.png?size=150)](https://github.com/BochilGaming) | [![Fadli](https://github.com/FadliDarmawan.png?size=100)](https://github.com/FadliDarmawan)
+----|----|----
+[Nurutomo](https://github.com/Nurutomo) | [Istikmal](https://github.com/BochilGaming) | [Fadli](https://github.com/FadliDarmawan)
+ Penulis / Pencipta | SC owner | Pengembang ulang
