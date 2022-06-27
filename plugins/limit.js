@@ -1,5 +1,3 @@
-// TODO: Make a canvas template
-
 import db from '../lib/database.js'
 const { createCanvas, loadImage, registerFont } = (await import('canvas')).default
 import path from 'path'

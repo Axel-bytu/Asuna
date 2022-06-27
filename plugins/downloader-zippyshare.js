@@ -2,7 +2,7 @@ import { extract } from 'zs-extract'
 import { lookup } from 'mime-types'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-  if (!args[0]) throw `Masukkan URL zippyshare yang ingin didownload.\n\nContoh: ${usedPrefix + command} https://otakudesu.watch/episode/seibu-yaro-girl-episode-5-sub-indo/`
+  if (!args[0]) throw `Masukkan URL zippyshare yang ingin didownload.\n\nContoh: ${usedPrefix + command} https://www83.zippyshare.com/v/wD7mX1i0/file.html`
   if (!args[0].includes('zippyshare.com')) throw 'Invalid URL!\nPastikan URL merupakan URL zippyshare.'
   await m.reply(wait)
   for (let i = 0; i < args.length; i++) {
@@ -17,5 +17,3 @@ handler.tags = ['downloader']
 handler.command = /^z(s|ippy(dl|share)?)$/i 
 
 export default handler
-
-// CREDIT: https://github.com/Rlxfly/re-md
