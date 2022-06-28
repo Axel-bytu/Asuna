@@ -1,5 +1,5 @@
 import cron from 'node-cron'
-import db from '../lib/database.js'
+// import db from '../lib/database.js'
 
 export async function all(m) {
     cron.schedule('0 0 4 * * *', () => {

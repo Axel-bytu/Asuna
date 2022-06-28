@@ -1,5 +1,5 @@
 import { format } from 'util'
-import db from '../lib/database.js'
+// import db from '../lib/database.js'
 
 let debugMode = !1
 

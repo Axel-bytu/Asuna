@@ -1,8 +1,8 @@
-import db from '../lib/database.js'
+// import db from '../lib/database.js'
 import { xpRange } from '../lib/levelling.js'
 import { promises } from 'fs'
 import { join } from 'path'
-import { plugins } from '../lib/plugins.js'
+// import { plugins } from '../lib/plugins.js'
 import fetch from 'node-fetch'
 import moment from 'moment-timezone'
 const defaultMenu = {
@@ -168,7 +168,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(db.data.users).length
     let rtotalreg = Object.values(db.data.users).filter(user => user.registered == true).length
-    let help = Object.values(plugins).filter(plugin => !plugin.disabled).map(plugin => {
+    let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
       return {
         help: Array.isArray(plugin.help) ? plugin.help : [plugin.help],
         tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],

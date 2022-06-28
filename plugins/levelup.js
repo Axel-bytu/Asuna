@@ -1,6 +1,6 @@
 import { canLevelUp, xpRange } from '../lib/levelling.js'
 import canvacord from 'canvacord'
-import db from '../lib/database.js'
+// import db from '../lib/database.js'
 
 let handler = async (m, { conn }) => {
     let who = m.sender

@@ -1,5 +1,5 @@
 import { youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper';
-import db from '../lib/database.js'
+// import db from '../lib/database.js'
 import fetch from 'node-fetch'
 
 let limit = 100

@@ -1,5 +1,5 @@
 import similarity from 'similarity'
-import db from '../lib/database.js'
+// import db from '../lib/database.js'
 
 const threshold = 0.72
 export async function before(m) {

@@ -1,4 +1,4 @@
-import db from '../lib/database.js'
+// import db from '../lib/database.js'
 
 export async function all(m) {
     if (!m.message)

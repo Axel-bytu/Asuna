@@ -1,4 +1,4 @@
-import db from '../lib/database.js'
+// import db from '../lib/database.js'
 const daily = 500
 
 let handler = async(m, { conn }) => {

@@ -1,6 +1,6 @@
 // TODO: fix this
 
-import db from '../lib/database.js'
+// import db from '../lib/database.js'
 import { canLevelUp } from '../lib/levelling.js'
 
 export function before(m) {

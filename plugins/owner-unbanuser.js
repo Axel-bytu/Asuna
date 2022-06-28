@@ -1,4 +1,4 @@
-import db from '../lib/database.js'
+// import db from '../lib/database.js'
 
 let handler = async (m, { conn, text }) => {
     if (!text) throw 'Siapa yang mau di unbanned?'

@@ -1,4 +1,4 @@
-import db from '../lib/database.js'
+// import db from '../lib/database.js'
 
 let handler = async (m, { command, usedPrefix, text }) => {
     if (!text) await conn.sendButton(m.chat, `Masukkan nama pesan yang ingin dihapus.\n\nContoh: ${usedPrefix + command} Tes`, watermark, false, [['Lihat daftar pesan', '.listmsg']], m)
