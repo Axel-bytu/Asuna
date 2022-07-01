@@ -30,12 +30,13 @@ let handler = async (m, { conn }) => {
     let before = user.level * 1
     while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
     if (before !== user.level) {
+        let xpnow = xpRange(user.level, global.multiplier)
         let rank = await new canvacord.Rank()
             .setRank(user.level + 1)
             .setAvatar(pp)
             .setLevel(user.level)
             .setCurrentXP(user.exp - min)
-            .setRequiredXP(xp)
+            .setRequiredXP(xpnow.xp)
             .setProgressBar("#f2aa4c", "COLOR")
             .setUsername(conn.getName(who))
             .setDiscriminator(discriminator)
