@@ -30,7 +30,8 @@ import {
   mongoDB,
   mongoDBV2
 } from './lib/mongoDB.js';
-import store from './lib/store.js'
+import storeSystem from './lib/store.js'
+import memory from './lib/memory.js'
 
 const {
   DisconnectReason
@@ -91,11 +92,14 @@ global.loadDatabase = async function loadDatabase() {
 loadDatabase()
 
 global.authFile = `${opts._[0] || 'session'}.data.json`
-const { state, saveState } = store.useSingleFileAuthState(global.authFile)
+const { state, saveState } = storeSystem.useSingleFileAuthState(global.authFile)
+const store = memory.makeInMemoryStore()
 
 const connectionOptions = {
   printQRInTerminal: true,
   auth: state,
+  downloadHistory: false,
+  getMessage: async (key) => (store.loadMessage(key.remoteJid, key.id) || store.loadMessage(key.id) || {}).message || null
   // logger: pino({ level: 'trace' })
 }
 
