@@ -30,7 +30,7 @@ import {
   mongoDB,
   mongoDBV2
 } from './lib/mongoDB.js';
-import storeSystem from './lib/store.js'
+import store from './lib/store.js'
 
 const {
   DisconnectReason
@@ -55,7 +55,6 @@ global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse()
 global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
 // global.opts['db'] = process.env['db']
-opts.db = 'mongodb+srv://haruno:harunoadmin@haruno.agdrq.mongodb.net/?retryWrites=true&w=majority'
 
 global.db = new Low(
   /https?:\/\//.test(opts['db'] || '') ?
@@ -91,13 +90,11 @@ global.loadDatabase = async function loadDatabase() {
 loadDatabase()
 
 global.authFile = `${opts._[0] || 'session'}.data.json`
-const { state, saveState } = storeSystem.useSingleFileAuthState(global.authFile)
-const store = storeSystem.makeInMemoryStore()
+const { state, saveState } = store.useSingleFileAuthState(global.authFile)
 
 const connectionOptions = {
   printQRInTerminal: true,
   auth: state,
-  getMessage: async (key) => (store.loadMessage(key.remoteJid, key.id) || store.loadMessage(key.id) || {}).message || null
   // logger: pino({ level: 'trace' })
 }
 
