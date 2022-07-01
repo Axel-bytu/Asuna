@@ -55,6 +55,7 @@ global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse()
 global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
 // global.opts['db'] = process.env['db']
+opts.db = 'mongodb+srv://haruno:harunoadmin@haruno.agdrq.mongodb.net/?retryWrites=true&w=majority'
 
 global.db = new Low(
   /https?:\/\//.test(opts['db'] || '') ?
