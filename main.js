@@ -91,7 +91,7 @@ global.loadDatabase = async function loadDatabase() {
 }
 loadDatabase()
 
-global.authFile = `${opts._[0] || 'session'}.data.json`
+global.authFile = `${opts._[0] || 'haruno'}.store.json`
 const { state, saveState } = storeSystem.useSingleFileAuthState(global.authFile)
 const store = memory.makeInMemoryStore()
 

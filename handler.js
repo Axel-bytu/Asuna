@@ -165,14 +165,12 @@ export async function handler(chatUpdate) {
                 if (!('autoread' in settings)) settings.autoread = false
                 if (!('restrict' in settings)) settings.restrict = false
                 if (!('report' in settings)) settings.report = false
-                if (!('nhentai' in settings)) settings.nhentai = false
                 if (!('canvas' in settings)) settings.canvas = false
             } else db.data.settings[this.user.jid] = {
                 self: false,
                 autoread: false,
                 restrict: false,
                 report: false,
-                nhentai: false,
                 canvas: true,
             }
         } catch (e) {

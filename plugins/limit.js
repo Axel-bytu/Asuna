@@ -1,5 +1,5 @@
 // import db from '../lib/database.js'
-const { createCanvas, loadImage, registerFont } = (await import('canvas')).default
+// const { createCanvas, loadImage, registerFont } = (await import('canvas')).default
 import path from 'path'
 
 let handler = async (m, { conn }) => {
@@ -11,7 +11,7 @@ let handler = async (m, { conn }) => {
     let name = conn.getName(who)
     let about = (await conn.fetchStatus(who).catch(console.error) || {}).status || 'Hey there! I\'m using Haruno!'
     let desc = about.replace(/(?![^\n]{1,32}$)([^\n]{1,32})\s/g, '$1\n')
-    let font = await registerFont(path.resolve('src/ja-jp.ttf'), {family: 'Genshin'})
+    // let font = await registerFont(path.resolve('src/ja-jp.ttf'), {family: 'Genshin'})
     let data = `
 Limit: ${user.limit}
 EXP: ${user.exp}
@@ -32,7 +32,8 @@ Joincount: *${user.joincount}*
         pp = await conn.profilePictureUrl(who, 'image')
     } catch (e) {
     }
-        // await conn.sendFile(m.chat, pp, 'pp.jpg', caption, m)
+        await conn.sendFile(m.chat, pp, 'pp.jpg', caption, m)
+        /*
         const canvas = createCanvas(1280, 610)
         const ctx = canvas.getContext('2d')
 
@@ -75,6 +76,7 @@ Joincount: *${user.joincount}*
         ctx.fillText("Haruno", 128, 436)
         ctx.restore()
         await conn.sendFile(m.chat, canvas.toBuffer(), 'canvas.jpg', caption, m)
+        */
 }
 handler.help = ['profile [@62XXXX]']
 handler.tags = ['xp']
