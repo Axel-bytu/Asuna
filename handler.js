@@ -514,7 +514,7 @@ export async function participantsUpdate({ id, participants, action }) {
                             externalAdReply: {
                                 title: action === 'add' ? wel : lea,
                                 body: 'Haruno',
-                                thumbnail: await(await fetch(global.image)).buffer(),
+                                thumbnailUrl: global.image,
                                 sourceUrl: source
                             }
                         }})
