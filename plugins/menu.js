@@ -13,6 +13,12 @@ const defaultMenu = {
 │
 ├ *%watermark*
 └───
+
+*Group Official*:
+\`\`\`https://chat.whatsapp.com/Dqdjz7aSWJj0IyORAsdYom\`\`\`
+
+Jika ingin memasukkan bot kedalam group, ketik command:
+*%usedPjoin <link group mu>
 %readmore`.trimStart(),
   header: '┌──「 %category 」',
   body: '├ %cmd %islimit %isPremium',
@@ -411,6 +417,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
       '%': '%',
       p: _p, uptime, muptime,
       me: conn.getName(conn.user.jid),
+      usedP: usedPrefix,
       watermark: global.watermark,
       npmname: packager.name,
       npmdesc: packager.description,

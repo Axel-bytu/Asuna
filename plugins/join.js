@@ -9,11 +9,11 @@ let handler = async (m, { conn, args, usedPrefix, isPrems, isOwner, command }) =
     let haruno = conn.getName(conn.user.jid)
     if (!code) throw 'Link Salah'
     if (!(isPrems || isOwner)) {
-        if (user.joincount === 1 ) throw `Kamu sudah melebihi token/limit memasukkan bot ke dalam group!`
+        if (user.joincount === 5 ) throw `Kamu sudah melebihi token/limit memasukkan bot ke dalam group!`
         user.joincount += 1
         let res = await conn.groupAcceptInvite(code)
         m.reply('Joining group...').then(async() => {
-            var jumlahHari = 86400000 * 1
+            var jumlahHari = 86400000 * 30
             var now = new Date() * 1
             if (now < db.data.chats[res].expired) db.data.chats[res].expired += jumlahHari
             else db.data.chats[res].expired = now + jumlahHari
@@ -22,7 +22,7 @@ let handler = async (m, { conn, args, usedPrefix, isPrems, isOwner, command }) =
                 await conn.sendButton(res, `${haruno} adalah bot whatsapp yang dibangun dengan Nodejs, ${haruno} diundang oleh @${m.sender.split(`@`)[0]}\n\nKetik ${usedPrefix}menu untuk melihat daftar perintah\nBot akan keluar secara otomatis setelah ${conn.msToDate(db.data.chats[res].expired - now)}`.trim(), watermark, await(await fetch('https://telegra.ph/file/b32e52b09508f1737a760.jpg')).buffer(), [['Menu', '.menu']], null, { mentions: [m.sender]})
         })
     } else if (!isOwner) {
-        if (users.joincount === 3) throw `Kamu sudah melebihi token/limit memasukkan bot ke dalam group!`
+        if (users.joincount === 10) throw `Kamu sudah melebihi token/limit memasukkan bot ke dalam group!`
         user.joincount += 1
         let res = await conn.groupAcceptInvite(code)
         m.reply('Joining group...').then(async() => {
