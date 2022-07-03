@@ -499,7 +499,7 @@ export async function participantsUpdate({ id, participants, action }) {
         case 'add':
         case 'remove':
             if (chat.welcome) {
-                let groupMetadata = await Connection.store.fetchGroupMetadata(id, this.groupMetadata)
+                let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                 for (let user of participants) {
                     let pp = './src/avatar_contact.png'
                     try {
