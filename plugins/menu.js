@@ -18,7 +18,7 @@ const defaultMenu = {
 \`\`\`https://chat.whatsapp.com/Dqdjz7aSWJj0IyORAsdYom\`\`\`
 
 Jika ingin memasukkan bot kedalam group, ketik command:
-*%usedPjoin <link group mu>
+*.join <link group mu>*
 %readmore`.trimStart(),
   header: '┌──「 %category 」',
   body: '├ %cmd %islimit %isPremium',
@@ -374,7 +374,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
           const listMessage = {
             title: `${ucapan()}, ${name}`.trim(),
             text: "Berikut ini adalah daftar menu Haruno Bot.",
-            footer: "Silahkan tekan tombol \"Click Here\" untuk melihat sub-menu Haruno Bot.\n\nJika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.",
+            footer: "Silahkan tekan tombol \"Click Here\" untuk melihat sub-menu Haruno Bot.\n\nJika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.\n*Group Official*: \`\`\`https://chat.whatsapp.com/Dqdjz7aSWJj0IyORAsdYom\`\`\`",
             buttonText: "Click Here",
             sections
         }
@@ -417,7 +417,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
       '%': '%',
       p: _p, uptime, muptime,
       me: conn.getName(conn.user.jid),
-      usedP: usedPrefix,
       watermark: global.watermark,
       npmname: packager.name,
       npmdesc: packager.description,
