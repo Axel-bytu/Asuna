@@ -15,10 +15,10 @@ export async function before(m, { isAdmin, isBotAdmin }) {
             const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
             if (m.text.includes(linkThisGroup)) return !0
         }
-        await conn.sendButton(m.chat, `*Group link terdeteksi!*${isBotAdmin ? '\n\nMatikan antilink?' : '\n\nBot bukan admin...'}`, watermark, ['Disable antilink', '/disable antilink'], m)
+        await conn.sendButton(m.chat, `*¡Link de grupo detectado!*${isBotAdmin ? '\n\n¿Desactivar antienlace?' : '\n\nBot no administrador...'}`, watermark, ['Disable antilink', '/disable antilink'], m)
         if (isBotAdmin && bot.restrict) {
             await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (!bot.restrict) return m.reply('Owner disable auto kick!')
+        } else if (!bot.restrict) return m.reply('¡El propietario desactivo el antilink')
     }
     return !0
 }
