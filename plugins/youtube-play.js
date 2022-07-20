@@ -4,10 +4,10 @@ import { youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper';
 let handler = async(m, { conn, usedPrefix, text, command, args }) => {
     let user = m.sender
     let name = conn.getName(user)
-    if (!text) throw `Harap masukkan query!\n\nContoh: ${usedPrefix + command} yanagi nagi one's hope`
+    if (!text) throw `¡Por favor ingrese una consulta!\n\nEjemplo: ${usedPrefix + command} Dead to me`
     let results = await yts(text)
     let vid = results.all.find(video => video.seconds < 3600)
-    if (!vid) throw 'Konten Tidak ditemukan'
+    if (!vid) throw 'Contenido no encontrado'
     const { thumbnail, audio: _audio, title } = await youtubedl(vid.url).catch(async _ => await youtubedlv2(vid.url)).catch(async _ => await youtubedlv3(vid.url))
     let audio, source, res, link, lastError
     for (let i in _audio) {
@@ -25,9 +25,9 @@ let handler = async(m, { conn, usedPrefix, text, command, args }) => {
     if ((!(source instanceof ArrayBuffer) || !link || !res.ok)) throw 'Error: ' + (lastError || 'Can\'t download audio')
     let capt = `
 ${title}
-Requested by @${user.split`@`[0]}
+Solicitado por @${user.split`@`[0]}
 
-Bot akan secara otomatis mengirimkan file audio.`
+El bot enviará automáticamente el archivo de audio.`
     const message = {
         image: { url: thumbnail},
         jpegThumbnail: await(await fetch(thumbnail)).buffer(),
