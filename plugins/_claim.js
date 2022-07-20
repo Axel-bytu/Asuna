@@ -8,6 +8,6 @@ export async function all(m) {
         for (id of users) db.data.users[id].claimed = false
     }, {
         scheduled: true,
-        timezone: "Asia/Jakarta"
+        timezone: "América/Guayaquil"
     })
 }
