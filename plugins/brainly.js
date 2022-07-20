@@ -4,12 +4,12 @@ import fetch from 'node-fetch'
 let brainly = new Brainly('id')
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-	if (!text) throw `Masukkan soal yang mau dicari.\n\nContoh: ${ usedPrefix + command } Tentukan luas dari bagian yang diarsir`
+	if (!text) throw `Introduce la pregunta que buscas.\n\nEjemplo: ${ usedPrefix + command } Determine el área de la parte sombreada`
 	let res = await brainly.search(text, 'id').catch(() => null)
 	console.log(res)
 		let answer = res.map(({ question, answers }, i) => `
-*Pert anyaan*${question.grade ? ` (${question.grade})` : ''}\n${question.content}${answers.map((v, i) => `
-*Jawaban Ke ${i + 1}*${v.verification ? ' (Verified)' : ''}${v.isBest ? ' (Best)' : ''}
+*Pregunta*${question.grade ? ` (${question.grade})` : ''}\n${question.content}${answers.map((v, i) => `
+*Respuesta para ${i + 1}*${v.verification ? ' (Verified)' : ''}${v.isBest ? ' (Best)' : ''}
 ${v.content}${v.attachments.length > 0 ? `\n*Media Url*: ${v.attachments.join(', ')}` : ''}`).join``}`).join('\n' + '-'.repeat(45))
 		m.reply(answer.trim())
 }
