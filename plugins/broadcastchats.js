@@ -5,13 +5,13 @@ let handler = async (m, { conn, text }) => {
   let chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map(v => v[0])
   let cc = conn.serializeM(text ? m : m.quoted ? await m.getQuotedObj() : false || m)
   let teks = text ? text : cc.text
-  conn.reply(m.chat, `Mengirim pesan broadcast ke ${chats.length} chat.`, m)
-  for (let id of chats) await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : teks + '\n' + readMore + '「 Haruno Broadcast 」\n' + randomID(32)), true).catch(_ => _)
-  m.reply('Selesai broadcast ke semua chat.')
+  conn.reply(m.chat, `Enviar un mensaje de difusión a ${chats.length} chat.`, m)
+  for (let id of chats) await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : teks + '\n' + readMore + '「 Asuna Transmitir 」\n' + randomID(32)), true).catch(_ => _)
+  m.reply('Transmitido a todos los chats.')
 }
-handler.help = ['broadcastchats', 'bcchats'].map(v => v + ' <teks>')
+handler.help = ['trasmitirchats', 'bcchats'].map(v => v + ' <teks>')
 handler.tags = ['owner']
-handler.command = /^(broadcastchats?|bcc(hats?)?)$/i
+handler.command = /^(trasmitirchats?|bcc(hats?)?)$/i
 
 handler.owner = true
 
