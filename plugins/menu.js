@@ -8,10 +8,11 @@ import moment from 'moment-timezone'
 const defaultMenu = {
   before: `
 ┌──「 *%me* 」
-├ Hai, *%name!*
+├ Hola, *%name!*
 ├ %time
 │
 ├ *%watermark*
+»»»»»𝘼𝙨𝙪𝙣𝙖ꨄ︎  ᷦ×͜×«««««
 └───
 
 *Group Official*:
@@ -188,51 +189,51 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
       const sections = [
             {
               "rows": [{
-                "title": `Pemilik Bot`,
-                "description": "Nomor Pemilik Bot (owner)",
+                "title": `Propietario del Bot`,
+                "description": "número de propietario del Bot (owner)",
                 "rowId": `${_p}creator`
               }, {
-                "title": "Syarat Ketentuan dan Peraturan",
-                "description": "Harap membaca Peraturan demi kenyamanan kita bersama",
+                "title": "Términos de Condiciones y Reglamentos",
+                "description": "Por favor lea las Reglas para nuestra conveniencia juntos",
                 "rowId": `${_p}rules`
               }, {
-                "title": "Group Official Harunobot",
-                "description": "Gabung untuk mendapatkan informasi mengenai bot atau sekedar meramaikan",
+                "title": "Group Official Asunabot",
+                "description": "Únase para obtener información sobre bots o simplemente para animar",
                 "rowId": `${_p}harunoff`
               }],
               "title": "Informasi Bot"
             }, {
               "rows": [{
-                "title": `Semua Perintah`,
-                "description": "Menu Semua Perintah",
+                "title": `Comandos`,
+                "description": "Menú Todos los comandos",
                 "rowId": `${_p}? all`
                 }],
               "title": "─────「 1 」"
             }, {
               "rows": [{
                 "title": `Game`,
-                "description": "Menu untuk Game",
+                "description": "Menu para Game",
                 "rowId": `${_p}? game`
               }],
               "title": "─────「 2 」"
             }, {
               "rows": [{
                 "title": `XP`,
-                "description": "Menu untuk XP",
+                "description": "Menu para XP",
                 "rowId": `${_p}? xp`
               }],
               "title": "─────「 3 」"
             }, {
               "rows": [{
                 "title": `Sticker`,
-                "description": "Menu untuk Sticker",
+                "description": "Menu para Sticker",
                 "rowId": `${_p}? stiker`
               }],
               "title": "─────「 4 」"
             }, {
               "rows": [{
                 "title": `Anime`,
-                "description": "Some anime, manga, doujinshi stuff...",
+                "description": "Algunas cosas de anime,manga,doujinshi...",
                 "rowId": `${_p}? anime`
               }],
               "title": "─────「 5 」"
@@ -246,63 +247,63 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
             }, {
               "rows": [{
                 "title": `Quotes`,
-                "description": "Menu untuk Quotes",
+                "description": "Menu para Quotes",
                 "rowId": `${_p}? quotes`
               }],
               "title": "─────「 7 」"
             }, {
               "rows": [{
                 "title": `Admin`,
-                "description": "Menu untuk Admin",
+                "description": "Menu para Admin",
                 "rowId": `${_p}? admin`
               }],
               "title": "─────「 8 」"
             }, {
               "rows": [{
                 "title": `Grup`,
-                "description": "Menu untuk Group",
+                "description": "Menu para Group",
                 "rowId": `${_p}? group`
               }],
               "title": "─────「 9 」"
             }, {
               "rows": [{
                 "title": `Premium`,
-                "description": "Menu untuk Premium Users",
+                "description": "Menu para usuarios Premium",
                 "rowId": `${_p}? premium`
               }],
               "title": "─────「 10 」"
             }, {
               "rows": [{
                 "title": `Internet`,
-                "description": "Menu untuk menjelajahi Internet...",
+                "description": "Menu para navegar por internet...",
                 "rowId": `${_p}? internet`
               }],
               "title": "─────「 11 」"
             }, {
               "rows": [{
                 "title": `Anonymous Chat`,
-                "description": "Menu untuk Anonymous Chat",
+                "description": "Menu para Anonymous Chat",
                 "rowId": `${_p}? anonymous`
               }],
               "title": "─────「 12 」"
             }, {
               "rows": [{
                 "title": `Nulis & Logo`,
-                "description": "Menu untuk Nulis & Logo",
+                "description": "Menu para Nulis & Logo",
                 "rowId": `${_p}? nulis`
               }],
               "title": "─────「 13 」"
             }, {
               "rows": [{
                 "title": `Downloader`,
-                "description": "Menu Downloader",
+                "description": "Menu para descargas",
                 "rowId": `${_p}? downloader`
               }],
               "title": "─────「 14 」"
             }, {
               "rows":[{
-                "title": `Tools`,
-                "description": "Menu untuk Tools",
+                "title": `Instrumentos`,
+                "description": "Menu para Instrumentos",
                 "rowId": `${_p}? tools`
               }],
               "title": "─────「 15 」"
@@ -316,14 +317,14 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
             }, {
               "rows": [{
                 "title": `Database`,
-                "description": "Menu untuk Database",
+                "description": "Menu para Database",
                 "rowId": `${_p}? database`
               }],
               "title": "─────「 17 」"
             }, {
               "rows": [{
                 "title": `Vote & Absen`,
-                "description": "Menu untuk Vote & Absen",
+                "description": "Menu para Vote & Absen",
                 "rowId": `${_p}? vote`
               }],
               "title": "─────「 18 」"
@@ -336,22 +337,22 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
               "title": "─────「 19 」"
             }, {
               "rows": [{
-                "title": `Pengubah Suara`,
-                "description": "Menu Pengubah Suara",
+                "title": `Cambiador de voz`,
+                "description": "Menu cambiador de voz",
                 "rowId": `${_p}? audio`
               }],
               "title": "─────「 20 」"
             }, {
               "rows": [{
                 "title":  `Jadi Bot`,
-                "description": "Numpang",
+                "description": "Conducir",
                 "rowId": `${_p}? jadibot`
               }],
               "title": "─────「 21 」"
             }, {
               "rows": [{
                 "title": `Info`,
-                "description": "Menu untuk Info",
+                "description": "Menu para Info",
                 "rowId": `${_p}? info`
               }],
               "title": "─────「 22 」"
@@ -365,7 +366,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
             }, {
               "rows": [{
                 "title":  `Owner Menu`,
-                "description": "Menu Khusus Owner",
+                "description": "Menu propietario especial",
                 "rowId": `${_p}? owner`
               }],
               "title": "─────「 24 」"
@@ -373,9 +374,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
           ]
           const listMessage = {
             title: `${ucapan()}, ${name}`.trim(),
-            text: "Berikut ini adalah daftar menu Haruno Bot.",
-            footer: "Silahkan tekan tombol \"Click Here\" untuk melihat sub-menu Haruno Bot.\n\nJika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.\n\n*Group Official*: \`\`\`https://chat.whatsapp.com/Dqdjz7aSWJj0IyORAsdYom\`\`\`",
-            buttonText: "Click Here",
+            text: "La siguiente es una lista de los menús de Asuna Bot.",
+            footer: "Por favor presione el botón \"Click aquí\" para ver el sub-menú Asuna Bot.\n\nSi encuentra fallas, errores o dificultades en el uso, informe/pregunte a owner.\n\n*Group Official*: \`\`\`https://chat.whatsapp.com/Dqdjz7aSWJj0IyORAsdYom\`\`\`",
+            buttonText: "Click Aquí",
             sections
         }
         await conn.sendMessage(m.chat, listMessage, { quoted: m})
@@ -433,7 +434,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
     await conn.sendButton(m.chat, text.trim(), watermark, await (await fetch(selectedimage)).buffer(), [['Owner', `${_p}owner`], ['Donasi', `${_p}donasi`], ['Group Official', '.harunoff']],  m)
   }
   } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    conn.reply(m.chat, 'Perdóneme, el menú está en error', m)
     throw e
   }
 }
@@ -465,19 +466,19 @@ function clockString(ms) {
 }
 
 function ucapan() {
-  const time = moment.tz('Asia/Jakarta').format('HH')
-  let res = "Selamat dinihari"
+  const time = moment.tz('America/Guayaquil').format('HH')
+  let res = "Buenos días"
   if (time >= 4) { 
-    res = "Ohayou!"
+    res = "Hola"
   }
   if (time > 10) {
-    res = "Konnichiwa!"
+    res = "Buenas tardes!"
   }
   if (time >= 15) {
-    res = "Konnichiwa!"
+    res = "Buenas tardes!"
   }
   if (time >= 18) {
-    res = "Konbanwa!"
+    res = "Buenas noches!"
   }
   return res
 }
