@@ -5,7 +5,7 @@ let handler = async (m, { text, conn }) => {
     user.afk = + new Date
     user.afkReason = text
     m.reply(`
-  ${conn.getName(m.sender)} sekarang AFK ${text ? ': ' + text : ''}
+  ${conn.getName(m.sender)} ahora AFK ${text ? ': ' + text : ''}
   `)
 }
 handler.help = ['afk <alasan>']
