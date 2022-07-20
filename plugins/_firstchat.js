@@ -12,16 +12,16 @@ export async function all(m) {
     if (db.data.settings.groupOnly) return
     let name = conn.getName(m.sender)
     let teks = `
-*Hi ${name}*
-Perkenalkan aku adalah Haruno bot!
+*Hola ${name}*
+¡Presenta que soy el bot Asuna!
 
-Kamu bisa menggunakan Haruno untuk membuat sticker, mendownload video youtube, facebook, tiktok, instagram, atau hanya sekedar bersenang senang! Fitur selengkapnya tentang Haruno bisa di lihat di *.menu*
+¡Puedes usar a Asuna para hacer pegatinas, descargar videos de youtube, facebook, tiktok, instagram o simplemente divertirte! Se pueden ver más características sobre Asuna en *.menu*
 
-Kami tidak akan melakukan spam broadcast ke users.
+No enviaremos transmisiones de spam a los usuarios.
 
-Jangan lupa patuhi rules, dan harap tidak menelpon, vc, spam, mengirimkan bug atau virtex ke nomor bot.
-Jika ada bug atau hal yang ingin ditanyakan silahkan menghubungi owner.
-Terimakasih!
+No se olvide de obedecer las reglas, y por favor no llame, vc, spam, envíe errores o virtex a los números de bot.
+Si hay errores o cosas que desea preguntar, comuníquese con el propietario.
+¡Gracias!
 `.trim()
     const message = {
         image: { url: 'https://telegra.ph/file/b32e52b09508f1737a760.jpg'},
@@ -31,7 +31,7 @@ Terimakasih!
         templateButtons: [
             {
                 urlButton: {
-                    displayText: 'Haruno\'s group',
+                    displayText: 'Asuna\'s group',
                     url: 'https://chat.whatsapp.com/Dqdjz7aSWJj0IyORAsdYom'
                 }
             }, {
