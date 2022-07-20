@@ -7,19 +7,19 @@ let handler = async(m, { conn }) => {
     let vcard = `
 BEGIN:VCARD
 VERSION:3.0
-N:;Fadli;;;
-FN:Fadli
+N:;Axel;;;
+FN:Axel
 TEL;type=CELL;type=VOICE;waid=${nomor}:${PhoneNumber('+' + nomor).getNumber('international')}
 X-WA-BIZ-NAME:Fadli
 X-WA-BIZ-DESCRIPTION:${biz.description.replace(/\n/g, '\\n')}
 END:VCARD
     `.trim()
-    let kont = await conn.sendMessage(m.chat, { contacts: { displayName: 'Fadli', contacts: [{vcard}]}}, { quoted: m})
-    conn.reply(m.chat, 'Nomor owner itu bukan bot, tidak usah chat command bot.\nChat yang sopan kalau belum dibales ya jangan spam. Makasih', kont)
+    let kont = await conn.sendMessage(m.chat, { contacts: { displayName: 'Axel', contacts: [{vcard}]}}, { quoted: m})
+    conn.reply(m.chat, 'El número de propietario no es un bot,no es necesario chatear con el bot de comando.\nChat cortés, si no has respondido, no envíes spam. Gracias', kont)
 }
-handler.help = ['owner', 'creator']
+handler.help = ['owner', 'creador']
 handler.tags = ['info']
 
-handler.command = /^(owner|creator)$/i
+handler.command = /^(owner|creador)$/i
 
 export default handler
