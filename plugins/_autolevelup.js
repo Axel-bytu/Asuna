@@ -13,9 +13,9 @@ export function before(m) {
 
     if (before !== user.level) {
         m.reply(`
-Selamat, anda telah naik level!
+¡Felicitaciones, has subido de nivel!
 *${before}* -> *${user.level}*
-gunakan *.profile* untuk mengecek
+Usar *.profile* para verificar 
 	`.trim())
     }
 }
