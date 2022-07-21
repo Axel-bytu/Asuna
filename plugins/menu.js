@@ -5,9 +5,9 @@ import { join } from 'path'
 // import { plugins } from '../lib/plugins.js'
 import fetch from 'node-fetch'
 import moment from 'moment-timezone'
+import  pp from './media/Asuna.jpg'
 const defaultMenu = {
   before: `
-import  pp from './media/Asuna.jpg
 ┌──「 *%me* 」
 ├ Hola, *%name!*
 ├ %time
@@ -467,13 +467,13 @@ function ucapan() {
     res = "🌇Buenos dias"
   }
   if (time > 10) {
-    res = "🏙️Buenas tardes!"
+    res = "🏙️Buenas tardes"
   }
   if (time >= 15) {
-    res = "🌆Buenas tardes!"
+    res = "🌆Buenas tardes"
   }
   if (time >= 18) {
-    res = "🌃Buenas noches!"
+    res = "🌃Buenas noches"
   }
   return res
 }
