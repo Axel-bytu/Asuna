@@ -2,7 +2,7 @@
 // import db from '../lib/database.js'
 
 let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
-  let isEnable = /true|enable|(turn)?on|1/i.test(command)
+  let isActivar = /true|activar|(turn)?on|1/i.test(command)
   let chat = db.data.chats[m.chat]
   let user = db.data.users[m.sender]
   let bot = db.data.settings[conn.user.jid] || {}
@@ -19,7 +19,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('admin', m, conn)
         throw false
       }
-      chat.welcome = isEnable
+      chat.welcome = isActivar
       break
     // case 'detect':
     //   if (!m.isGroup) {
@@ -31,7 +31,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     //     global.dfail('admin', m, conn)
     //     throw false
     //   }
-    //   chat.detect = isEnable
+    //   chat.detect = isActivar
     //   break
     case 'delete':
       if (m.isGroup) {
@@ -40,7 +40,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
           throw false
         }
       }
-      chat.delete = isEnable
+      chat.delete = isActivar
       break
     case 'antidelete':
       if (m.isGroup) {
@@ -49,7 +49,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
           throw false
         }
       }
-      chat.delete = !isEnable
+      chat.delete = !isActivar
       break
     // case 'autodelvn':
     //   if (m.isGroup) {
@@ -58,10 +58,10 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     //       throw false
     //     }
     //   }
-    //   chat.autodelvn = isEnable
+    //   chat.autodelvn = isActivar
     //   break
     // case 'document':
-    //   chat.useDocument = isEnable
+    //   chat.useDocument = isActivar
     //   break
     case 'public':
       isAll = true
@@ -69,7 +69,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('rowner', m, conn)
         throw false
       }
-      global.opts['self'] = !isEnable
+      global.opts['self'] = !isActivar
       break
     case 'antilink':
       if (m.isGroup) {
@@ -78,7 +78,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
           throw false
         }
       }
-      chat.antiLink = isEnable
+      chat.antiLink = isActivar
       break
     // case 'toxic':
     //   if (m.isGroup) {
@@ -87,7 +87,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     //       throw false
     //     }
     //   }
-    //   chat.antiToxic = !isEnable
+    //   chat.antiToxic = !isActivar
     //   break
     // case 'antitoxic':
     //   if (m.isGroup) {
@@ -96,11 +96,11 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     //       throw false
     //     }
     //   }
-    //   chat.antiToxic = isEnable
+    //   chat.antiToxic = isActivar
     //   break
     // case 'autolevelup':
     //   isUser = true
-    //   user.autolevelup = isEnable
+    //   user.autolevelup = isActivar
     //   break
     // case 'mycontact':
     // case 'mycontacts':
@@ -112,7 +112,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     //     global.dfail('owner', m, conn)
     //     throw false
     //   }
-    //   conn.callWhitelistMode = isEnable
+    //   conn.callWhitelistMode = isActivar
     //   break
     case 'restrict':
       isAll = true
@@ -120,7 +120,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('owner', m, conn)
         throw false
       }
-      bot.restrict = isEnable
+      bot.restrict = isActivar
       break
     case 'canvas':
       isAll = true
@@ -135,7 +135,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('rowner', m, conn)
         throw false
       }
-      global.opts['nyimak'] = isEnable
+      global.opts['nyimak'] = isActivar
       break
     case 'autoread':
       isAll = true
@@ -143,7 +143,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('rowner', m, conn)
         throw false
       }
-      global.opts['autoread'] = isEnable
+      global.opts['autoread'] = isActivar
       break
     case 'pconly':
     case 'privateonly':
@@ -152,7 +152,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('rowner', m, conn)
         throw false
       }
-      global.opts['pconly'] = isEnable
+      global.opts['pconly'] = isActivar
       break
     case 'gconly':
     case 'grouponly':
@@ -161,7 +161,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('rowner', m, conn)
         throw false
       }
-      global.opts['gconly'] = isEnable
+      global.opts['gconly'] = isActivar
       break
     case 'swonly':
     case 'statusonly':
@@ -170,23 +170,23 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('rowner', m, conn)
         throw false
       }
-      global.opts['swonly'] = isEnable
+      global.opts['swonly'] = isActivar
       break
     default:
       if (!/[01]/.test(command)) return m.reply(`
-List option: welcome | delete | public | antilink | antidelete | antitoxic | autolevelup | detect | document | whitelistmycontacts | canvas  | restrict | nyimak | autoread | pconly | gconly | swonly
-Contoh:
+Lista de opciones: welcome | delete | public | antilink | antidelete | antitoxic | autolevelup | detect | document | whitelistmycontacts | canvas  | restrict | nyimak | autoread | pconly | gconly | swonly
+Ejemplo:
 ${usedPrefix}enable welcome
 ${usedPrefix}disable welcome
 `.trim())
       throw false
   }
   m.reply(`
-*${type}* berhasil di *${isEnable ? 'nyala' : 'mati'}kan* ${isAll ? 'untuk bot ini' : isUser ? '' : 'untuk chat ini'}
+*${type}* exitoso en *${isActivar ? 'fuego' : 'muerto'}kan* ${isAll ? 'para este bot' : isUser ? '' : 'para esta charla'}
 `.trim())
 }
-handler.help = ['en', 'dis'].map(v => v + 'able <option>')
+handler.help = ['activar', 'desactivar'].map(v => v + 'able <option>')
 handler.tags = ['group', 'owner']
-handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff)|[01])$/i
+handler.command = /^((ac|desc)tivar|(tru|fals)e|(turn)?o(n|ff)|[01])$/i
 
 export default handler
