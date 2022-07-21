@@ -10,7 +10,7 @@ VERSION:3.0
 N:;Axel;;;
 FN:Axel
 TEL;type=CELL;type=VOICE;waid=${nomor}:${PhoneNumber('+' + nomor).getNumber('international')}
-X-WA-BIZ-NAME:Fadli
+X-WA-BIZ-NAME:Axel
 X-WA-BIZ-DESCRIPTION:${biz.description.replace(/\n/g, '\\n')}
 END:VCARD
     `.trim()
