@@ -2,8 +2,8 @@ import { extract } from 'zs-extract'
 import { lookup } from 'mime-types'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-  if (!args[0]) throw `Masukkan URL zippyshare yang ingin didownload.\n\nContoh: ${usedPrefix + command} https://www83.zippyshare.com/v/wD7mX1i0/file.html`
-  if (!args[0].includes('zippyshare.com')) throw 'Invalid URL!\nPastikan URL merupakan URL zippyshare.'
+  if (!args[0]) throw `Ingrese la URL zippyshare que desea descargar.\n\nEjemplo: ${usedPrefix + command} https://www83.zippyshare.com/v/wD7mX1i0/file.html`
+  if (!args[0].includes('zippyshare.com')) throw '¡URL no válida!\nAsegúrese de que la URL sea una URL zippyshare.'
   await m.reply(wait)
   for (let i = 0; i < args.length; i++) {
     if (!args[i].includes('zippyshare.com/v')) continue
