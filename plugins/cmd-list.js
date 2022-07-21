@@ -2,7 +2,7 @@
 
 let handler = async (m, { conn }) => {
     conn.reply(m.chat, `
-Daftar hash
+Lista hash
 
 \`\`\`
 ${Object.entries(db.data.sticker).map(([key, value], index) => `${index + 1}. ${value.locked ? `(Terkunci) ${key}` : key} : ${value.text}`).join('\n')}
