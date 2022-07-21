@@ -15,11 +15,6 @@ const defaultMenu = {
 »»»»»𝘼𝙨𝙪𝙣𝙖ꨄ︎  ᷦ×͜×«««««
 └───
 
-*Group Official*:
-\`\`\`https://chat.whatsapp.com/Dqdjz7aSWJj0IyORAsdYom\`\`\`
-
-Jika ingin memasukkan bot kedalam group, ketik command:
-*.join <link group mu>*
 %readmore`.trimStart(),
   header: '┌──「 %category 」',
   body: '├ %cmd %islimit %isPremium',
@@ -425,13 +420,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
       exp: exp - min,
       maxexp: xp,
       totalexp: exp,
-      xp4levelup: max - exp <= 0 ? `Siap untuk *${_p}levelup*` : `${max - exp} XP lagi untuk levelup`,
+      xp4levelup: max - exp <= 0 ? `Preparado para *${_p}levelup*` : `${max - exp} XP de nuevo para subir de nivel`,
       github: packager.homepage ? packager.homepage.url || packager.homepage : '[unknown github url]',
       level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.sendButton(m.chat, text.trim(), watermark, await (await fetch(selectedimage)).buffer(), [['Owner', `${_p}owner`], ['Donasi', `${_p}donasi`], ['Group Official', '.harunoff']],  m)
+    await conn.sendButton(m.chat, text.trim(), watermark, await (await fetch(selectedimage)).buffer(), [['Owner', `${_p}owner`], ['Donasi', `${_p}donasi`]],  m)
   }
   } catch (e) {
     conn.reply(m.chat, 'Perdóneme, el menú está en error', m)
