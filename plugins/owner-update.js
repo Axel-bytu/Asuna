@@ -7,7 +7,7 @@ let handler = async (m, { conn, text, isROwner }) => {
     m.reply(stdout.toString())
   }
 }
-handler.help = ['update']
+handler.help = ['actualizar']
 handler.tags = ['host']
-handler.command = /^update$/i
+handler.command = /^actualizar$/i
 export default handler
