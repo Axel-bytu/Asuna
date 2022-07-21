@@ -5,7 +5,6 @@ import { join } from 'path'
 // import { plugins } from '../lib/plugins.js'
 import fetch from 'node-fetch'
 import moment from 'moment-timezone'
-import  pp from './media/Asuna.jpg'
 const defaultMenu = {
   before: `
 ┌──「 *%me* 」
