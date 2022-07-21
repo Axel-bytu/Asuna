@@ -2,12 +2,12 @@
 
 let handler = async (m, { text, usedPrefix, command }) => {
     db.data.sticker = db.data.sticker || {}
-    if (!m.quoted) throw `Reply stiker dengan perintah ${usedPrefix + command}`
-    if (!m.quoted.fileSha256) throw 'SHA256 Hash Missing'
-    if (!text) throw `Harap masukkan command yang ingin diatur.\n\nContoh: ${usedPrefix + command} .menu`
+    if (!m.quoted) throw `Etiqueta de respuesta con comando ${usedPrefix + command}`
+    if (!m.quoted.fileSha256) throw 'Falta hash SHA256'
+    if (!text) throw `Ingrese el comando que desea configurar.\n\nEjemplo: ${usedPrefix + command} .menu`
     let sticker = db.data.sticker
     let hash = m.quoted.fileSha256.toString('base64')
-    if (sticker[hash] && sticker[hash].locked) throw 'Kamu tidak memiliki izin untuk mengubah perintah stiker ini.'
+    if (sticker[hash] && sticker[hash].locked) throw 'No tienes permiso para modificar este pedido de pegatinas.'
     sticker[hash] = {
         text,
         mentionedJid: m.mentionedJid,
@@ -15,7 +15,7 @@ let handler = async (m, { text, usedPrefix, command }) => {
         at: + new Date,
         locked: false,
     }
-    m.reply(`Berhasil!`)
+    m.reply(`¡Éxito!`)
 }
 
 
