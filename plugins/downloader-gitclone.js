@@ -1,8 +1,8 @@
 import fetch from 'node-fetch'
 const regex = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
 let handler = async (m, { args, usedPrefix, command }) => {
-    if (!args[0]) throw `Masukkan URL repository yang ingin di clone.\n\nContoh: ${usedPrefix + command} https://github.com/FadliDarmawan/haruno-md`
-    if (!regex.test(args[0])) throw 'URL salah!\nPastikan URL adalah URL repository Github.'
+    if (!args[0]) throw `Introduce la URL del repositorio que quieres clonar.\n\nEjemplo: ${usedPrefix + command} https://github.com/Axel-bytu/Asuna-md`
+    if (!regex.test(args[0])) throw '¡URL incorrecta!\nAsegúrate de que la URL es la URL del repositorio de Github.'
     let [_, user, repo] = args[0].match(regex) || []
     repo = repo.replace(/.git$/, '')
     let url = `https://api.github.com/repos/${user}/${repo}/zipball`
