@@ -425,6 +425,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
+    conn.sendFile(m.chat, 'media/Asuna.jpg', '', text.trim(), m)
     await conn.sendButton(m.chat, text.trim(), watermark, await (await fetch(selectedimage)).buffer(), [['Owner', `${_p}owner`], ['Donasi', `${_p}donasi`]],  m)
   }
   } catch (e) {
