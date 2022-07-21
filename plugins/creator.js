@@ -15,7 +15,7 @@ X-WA-BIZ-DESCRIPTION:${biz.description.replace(/\n/g, '\\n')}
 END:VCARD
     `.trim()
     let kont = await conn.sendMessage(m.chat, { contacts: { displayName: 'Axel', contacts: [{vcard}]}}, { quoted: m})
-    conn.reply(m.chat, 'El número de propietario no es un bot,no es necesario chatear con el bot de comando.\nChat cortés, si no has respondido, no envíes spam. Gracias', kont)
+    conn.reply(m.chat, kont)
 }
 handler.help = ['owner', 'creador']
 handler.tags = ['info']
