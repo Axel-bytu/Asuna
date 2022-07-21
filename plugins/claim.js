@@ -4,7 +4,7 @@ const daily = 500
 let handler = async(m, { conn }) => {
     let user = db.data.users[m.sender]
     if (user.claimed) {
-        throw `Kamu sudah claim hari ini.\nClaim lagi besok hari.\n\nData claim akan diriset setiap jam 04:00 WIB.`
+        throw `Has reclamado hoy.\nReclama de nuevo mañana.\n\nLos datos de la reclamación se restablecerán cada hora 04:00 WIB.`
     } else {
         let hec = user.level
         if (user.level === 0) {
@@ -12,7 +12,7 @@ let handler = async(m, { conn }) => {
         }
         user.exp += daily * hec
         user.claimed = true
-        throw `*+${daily * hec} XP*\n\nSemakin tinggi level semakin banyak XP yang didapat.`
+        throw `*+${daily * hec} XP*\n\nCuanto más alto sea el nivel, más XP obtienes.`
     }
 }
 
