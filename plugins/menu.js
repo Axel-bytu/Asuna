@@ -7,12 +7,12 @@ import fetch from 'node-fetch'
 import moment from 'moment-timezone'
 const defaultMenu = {
   before: `
+import  pp from './media/Asuna.jpg
 ┌──「 *%me* 」
 ├ Hola, *%name!*
 ├ %time
 │
 ├ *%watermark*
-»»»»»𝘼𝙨𝙪𝙣𝙖ꨄ︎  ᷦ×͜×«««««
 └───
 
 %readmore`.trimStart(),
@@ -462,18 +462,18 @@ function clockString(ms) {
 
 function ucapan() {
   const time = moment.tz('America/Guayaquil').format('HH')
-  let res = "Buenos días"
+  let res = "Hola soy Asuna bot"
   if (time >= 4) { 
-    res = "Hola"
+    res = "🌇Buenos dias"
   }
   if (time > 10) {
-    res = "Buenas tardes!"
+    res = "🏙️Buenas tardes!"
   }
   if (time >= 15) {
-    res = "Buenas tardes!"
+    res = "🌆Buenas tardes!"
   }
   if (time >= 18) {
-    res = "Buenas noches!"
+    res = "🌃Buenas noches!"
   }
   return res
 }
