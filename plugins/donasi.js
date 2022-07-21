@@ -2,10 +2,7 @@ import fetch from 'node-fetch'
 let handler = async(m, { conn }) => {
     let teks = `
 ┌──「 Donasi 」
-├ Dana: 628112958665
-├ OVO: 628112958665
-├ GoPay: 628112958665
-├ Pulsa: 6281943265086
+├ Axel: 593962681710
 └───
 `.trim()
     const message = {
@@ -17,7 +14,7 @@ let handler = async(m, { conn }) => {
             {
                 urlButton: {
                     displayText: 'Saweria',
-                    url: 'https://saweria.co/FadliStudio'
+                    url: 'https://Instagram.com/axelcagua'
                 }
             }, {
                 quickReplyButton: {
