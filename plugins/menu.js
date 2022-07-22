@@ -14,6 +14,9 @@ const defaultMenu = {
 ├ *%watermark*
 └───
 
+*Instagram*:
+\`\`\`https://instagram.com/asunabot\`\`\`
+
 %readmore`.trimStart(),
   header: '┌──「 %category 」',
   body: '├ %cmd %islimit %isPremium',
@@ -368,9 +371,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
           ]
           const listMessage = {
             title: `${ucapan()}, ${name}`.trim(),
-            text: "La siguiente es una lista de los menús de Asuna Bot.",
-            footer: "Por favor presione el botón \"Click aquí\" para ver el sub-menú Asuna Bot.\n\nSi encuentra fallas, errores o dificultades en el uso, informe/pregunte a owner.\n\n*Group Official*: \`\`\`https://chat.whatsapp.com/Dqdjz7aSWJj0IyORAsdYom\`\`\`",
-            buttonText: "Click Aquí",
+            text: "La siguiente es una lista del Menu.",
+            buttonText: "MENU",
             sections
         }
         await conn.sendMessage(m.chat, listMessage, { quoted: m})
@@ -424,8 +426,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
       level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
       readmore: readMore
     }
-    text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.sendFile(m.chat, 'media/Asuna.jpg', '', text.trim(), m)
+    text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name]
     await conn.sendButton(m.chat, text.trim(), watermark, await (await fetch(selectedimage)).buffer(), [['Owner', `${_p}owner`], ['Donasi', `${_p}donasi`]],  m)
   }
   } catch (e) {
