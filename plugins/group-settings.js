@@ -1,28 +1,28 @@
+let { GroupSettingChange } = require('@adiwajshing/baileys')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 	let isClose = {
-		'open': 'not_announcement',
-		'buka': 'not_announcement',
-		'on': 'not_announcement',
-		'1': 'not_announcement',
-		'close': 'announcement',
-		'tutup': 'announcement',
-		'off': 'announcement',
-		'0': 'announcement',
+		'open': false,
+		'abierto': false,
+		'on': false,
+		'1': false,
+		'close': true,
+		'cerrado': true,
+		'off': true,
+		'0': true,
 	}[(args[0] || '')]
 	if (isClose === undefined) {
-		await conn.sendButton(m.chat, `
+		await conn.send2Button(m.chat, `
 contoh:
-${usedPrefix + command} tutup
-${usedPrefix + command} buka
-	`.trim(), watermark, false, [['Buka', ',grup 1'], ['Tutup', ',grup 0']], m)
+${usedPrefix + command} cerrado
+${usedPrefix + command} abierto
+	`.trim(), watermark, 'Abierto', ',grup 1', 'Cerrado', ',grup 0')
 		throw false
 	}
-	await conn.groupSettingUpdate(m.chat, isClose)
+	await conn.groupSettingChange(m.chat, GroupSettingChange.messageSend, isClose)
 }
-handler.help = ['grup <buka/tutup>']
+handler.help = ['grupo <abierto/cerrado>']
 handler.tags = ['group']
 handler.command = /^(gro?up)$/i
 handler.admin = true
 handler.botAdmin = true
-
-export default handler
+module.exports = handler
