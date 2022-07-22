@@ -5,12 +5,12 @@ let handler = async (m, { conn, args, command }) => {
             await conn.groupLeave(id)
             await delay(2000) // jeda 2 detik
         }
-        await m.reply('Berhasil!')
+        await m.reply('¡Triunfar!')
     } else if (args[0] || args.length > 5) {
         let ada = chat.find(bot => bot == args[0]) // Apakah botnya ada disitu
-        if (!ada) throw 'id salah/bot tidak ada digrup itu'
+        if (!ada) throw 'ID/bot incorrecto no existe en ese grupo'
         await conn.groupLeave(args[0])
-        await m.reply('Berhasil!')
+        await m.reply('¡Triunfar!')
     } else {
         if (!m.isGroup) return global.dfail('group', m, conn)
         await conn.groupLeave(m.chat)
