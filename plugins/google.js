@@ -3,7 +3,7 @@ let handler = async (m, { conn, command, args, usedPrefix }) => {
     const fetch = (await import('node-fetch')).default
     let full = /f$/i.test(command)
     let text = args.join` `
-    if (!text) throw `Masukkan query yang ingin dicari.\n\nContoh: ${ usedPrefix + command} Shinao Hiiragi`
+    if (!text) throw `Ingrese la consulta que desea buscar.\n\nEjemplo: ${ usedPrefix + command} Shinao Hiiragi`
     let url = 'https://google.com/search?q=' + encodeURIComponent(text)
     let search = await googleIt(text)
     let msg = search.articles.map(({
