@@ -184,22 +184,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
     })
     if (teks == '404') {
       const sections = [
-            {
-              "rows": [{
-                "title": `Propietario del Bot`,
-                "description": "número de propietario del Bot (owner)",
-                "rowId": `${_p}creator`
-              }, {
-                "title": "Términos de Condiciones y Reglamentos",
-                "description": "Por favor lea las Reglas para nuestra conveniencia juntos",
-                "rowId": `${_p}rules`
-              }, {
-                "title": "Group Official Asunabot",
-                "description": "Únase para obtener información sobre bots o simplemente para animar",
-                "rowId": `${_p}harunoff`
-              }],
-              "title": "Informasi Bot"
-            }, {
+             {
               "rows": [{
                 "title": `Comandos`,
                 "description": "Menú Todos los comandos",
