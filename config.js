@@ -34,12 +34,12 @@ global.packname = 'Asuna'
 global.author = 'Kirito'
 
 // Haruno global
-global.image = 'https://telegra.ph/Asuna-07-23'
+global.image = 'https://github.com/Axel-bytu/Asuna/blob/main/media/Asuna.jpg'
 global.watermark = '© Asuna'
 global.wait = '「 ⏱️ 」Espera por favor...'
 global.multiplier = 59 // The higher, The harder levelup
 global.source = 'https://youtu.be/pgCNibhSYsY'
-global.pic =  ['https://telegra.ph/Asuna-07-23-2', 'https://telegra.ph/file/67ae7747903d9b45a7427.jpg', 'https://telegra.ph/file/5d8c2f2797cb067ef887c.jpg', 'https://telegra.ph/file/07f09ce47a07c187b1d79.jpg', 'https://telegra.ph/file/456bdf2f852674b3fdb18.jpg', 'https://telegra.ph/file/96bfbbe091aa5523c7150.jpg', 'https://telegra.ph/file/7644617a4ad58d8d6f0e2.jpg']
+global.pic =  ['https://telegra.ph/file/f96d9fdebba8eaa08ba7b.jpg', 'https://telegra.ph/file/67ae7747903d9b45a7427.jpg', 'https://telegra.ph/file/5d8c2f2797cb067ef887c.jpg', 'https://telegra.ph/file/07f09ce47a07c187b1d79.jpg', 'https://telegra.ph/file/456bdf2f852674b3fdb18.jpg', 'https://telegra.ph/file/96bfbbe091aa5523c7150.jpg', 'https://telegra.ph/file/7644617a4ad58d8d6f0e2.jpg']
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
