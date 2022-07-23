@@ -1,5 +1,3 @@
-contributor
-192 lines (190 sloc)  4.9 KB
 // TODO: Cleaning the message
 // import db from '../lib/database.js'
 
