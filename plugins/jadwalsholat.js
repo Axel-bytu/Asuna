@@ -1,9 +1,9 @@
 import { jadwalsholat } from '@bochilteam/scraper'
 let handler = async (m, { text, usedPrefix, command }) => {
-    if (!text) throw `Masukkan kota yang akan dicari.\n\nContoh: ${usedPrefix + command} Yogyakarta`
+    if (!text) throw `Introduce la ciudad a buscar.\n\nEjemplo: ${usedPrefix + command} Quito`
     const res = await jadwalsholat(text)
     m.reply(`
-Jadwal Sholat ${text}
+Horario de oración ${text}
 
 ${Object.entries(res.today).map(([name, data]) => `Sholat ${name}: ${data}`).join('\n').trim()}
 `.trim())
