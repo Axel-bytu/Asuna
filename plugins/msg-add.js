@@ -3,12 +3,12 @@ const { proto } = (await import('@adiwajshing/baileys')).default
 
 let handler = async (m, { conn, command, usedPrefix, text }) => {
     let M = proto.WebMessageInfo
-    if (!m.quoted) throw `Reply pesan dengan perintah *${usedPrefix + command}`
-    if (!text) throw `Masukkan nama untuk pesan.\n\nContoh: ${usedPrefix + command} Tes`
+    if (!m.quoted) throw `Responder mensaje con comando *${usedPrefix + command}`
+    if (!text) throw `Introduce un nombre para el mensaje..\n\nEjemplo: ${usedPrefix + command} Tes`
     let msgs = db.data.msgs
-    if (text in msgs) throw `'${text}' telah terdaftar!\nGunakan nama lain.`
+    if (text in msgs) throw `'${text}' ¡registrado!\nUsar otro nombre.`
     msgs[text] = M.fromObject(await m.getQuotedObj()).toJSON()
-    m.reply(`Berhasil menambahkan pesan '${text}'\n\nAkses dengan mengetik namanya`.trim())
+    m.reply(`Mensaje agregado con éxito '${text}'\n\nAccede escribiendo el nombre`.trim())
 }
 handler.help = ['msg'].map(v => 'add' + v + ' <teks>')
 handler.tags = ['database']
