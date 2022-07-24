@@ -1,12 +1,12 @@
 import { truth } from '@bochilteam/scraper'
 
 let handler = async (m, { conn, usedPrefix }) => conn.sendButton(m.chat, await truth(), watermark, [
-    ['Truth', `${usedPrefix}truth`],
-    ['Dare', `${usedPrefix}dare`]
+    ['verdad', `${usedPrefix}verdad`],
+    ['reto', `${usedPrefix}reto`]
 ], m)
 
-handler.help = ['truth']
+handler.help = ['verdad']
 handler.tags = ['quotes', 'fun']
-handler.command = /^(truth)$/i
+handler.command = /^(verdad)$/i
 
 export default handler
