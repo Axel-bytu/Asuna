@@ -5,13 +5,13 @@ import { URL_REGEX } from '@adiwajshing/baileys'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 	text = text.endsWith('SMH') ? text.replace('SMH', '') : text 
-	if (!text) throw `Masukkan URL pinterest yang ingin didownload.\nAtau masukkan kata kunci dari gambar yang ingin kamu cari.\n\nContoh: ${usedPrefix + command} Yukinoshita Yukino icon`
+	if (!text) throw `Ingresa la URL del pinterest que deseas descargar.\nO ingresa la palabra clave de la imagen que deseas buscar.\n\nEjemplo: ${usedPrefix + command} Yukinoshita Yukino icon`
 	let res = await pinterest(text)
 	// if (!res) throw res
 	let mime = await lookup(res)
 	text.match(URL_REGEX) ?
 		await conn.sendMessage(m.chat, { [mime.split('/')[0]]: { url: res }, caption: `Succes Download: ${await shortUrl(res)}` }, { quoted: m }) :
-	await conn.sendButton(m.chat, `Hasil untuk: ${text}`, watermark, res, [['Next', `${usedPrefix + command} ${text}`]], m)
+	await conn.sendButton(m.chat, `Resultados para: ${text}`, watermark, res, [['Next', `${usedPrefix + command} ${text}`]], m)
 }
 handler.help = ['pinterest']
 handler.tags = ['downloader']
