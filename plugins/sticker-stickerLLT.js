@@ -4,7 +4,7 @@ import { stickerLine, stickerTelegram } from '@bochilteam/scraper'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     // TODO: add stickerly
     const isTele = /tele/i.test(command)
-    if (!args[0]) throw `Masukkan URL sticker ${isTele ? 'Tele' : 'Line'} yang ingin diubah menjadi sticker whatsapp.\n\nContoh: ${usedPrefix + command} https://t.me/addstickers/Animestickerstudio`
+    if (!args[0]) throw `Introduce la URL de los sticker ${isTele ? 'Tele' : 'Line'} que quieres convertir en un sticker de whatsapp.\n\nEjemplo: ${usedPrefix + command} https://t.me/addstickers/Animestickerstudio`
     const json = await (isTele ? stickerTelegram : stickerLine)(args[0])
     m.reply(`
 *Total stiker:* ${(json[0]?.stickers || json).length}
