@@ -9,9 +9,9 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || q.mediaType || ''
     if (/webp|image|video/g.test(mime)) {
-      if (/video/g.test(mime)) if ((q.msg || q).seconds > 11) return m.reply('Maksimal 10 detik!')
+      if (/video/g.test(mime)) if ((q.msg || q).seconds > 11) return m.reply('¡10 segundos como máximo!')
       let img = await q.download?.()
-      if (!img) throw `balas gambar/video/stiker dengan perintah ${usedPrefix + command}`
+      if (!img) throw `responder imagen/video/pegatina con comando ${usedPrefix + command}`
       let out
       try {
         stiker = await sticker(img, false, global.packname, global.author)
@@ -35,7 +35,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!stiker) stiker = e
   } finally {
     if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
-    else throw 'Conversion failed'
+    else throw 'La conversión falló'
   }
 }
 handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>']
