@@ -1,11 +1,11 @@
 import { dare } from '@bochilteam/scraper'
 
 let handler = async (m, { conn, usedPrefix }) => conn.sendButton(m.chat, await dare(), watermark, [
-    ['Dare', `${usedPrefix}dare`], 
-    ['Truth', `${usedPrefix}truth`]
+    ['reto', `${usedPrefix}reto`], 
+    ['verdad', `${usedPrefix}verdad`]
 ], m)
 
-handler.help = ['dare']
+handler.help = ['reto']
 handler.tags = ['quotes', 'fun']
 handler.command = /^(dare)$/i
 
