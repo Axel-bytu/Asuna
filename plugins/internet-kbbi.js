@@ -1,7 +1,7 @@
 import { kbbi } from '@bochilteam/scraper'
 
 let handler = async (m, { text, usedPrefix, command }) => {
-    if (!text) throw `Masukkan kata yang mau dicari.\n\nContoh: ${usedPrefix + command} Arunika`
+    if (!text) throw `Ingrese la palabra que desea buscar.\n\nEjemplo: ${usedPrefix + command} Arunika`
     const res = await kbbi(text)
     m.reply(`
 ${res.map(v => `
@@ -10,9 +10,9 @@ Subjek: ${v.title}
 ${v.means.map(v => '- ' + v).join('\n`')}
 `).join('\n').trim()}
 
-Note:
-p = Partikel: kelas kata yang meliputi kata depan, kata sambung, kata seru, kata sandang, ucapan salam
-n = Nomina: kata benda
+Nota:
+p = Partículas: clase de palabras que incluye preposiciones, conjunciones, interjecciones, artículos, saludos
+n = sustantivo: sustantivo
 `.trim())
 }
 handler.help = ['kbbi <teks>']
