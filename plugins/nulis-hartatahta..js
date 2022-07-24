@@ -1,6 +1,6 @@
 let handler = async (m, { conn, text }) => {
     conn.hartatahta = conn.hartatahta ? conn.hartatahta : {}
-    if (m.chat in conn.hartatahta) throw 'Masih ada yang membuat Harta Tahta di room chat ini.\nTunggu sampai selesai...'
+    if (m.chat in conn.hartatahta) throw 'Todavía hay quienes hacen Treasure Thrones en esta sala de chat.\nEspera hasta que termine...'
     else conn.hartatahta[m.chat] = true
     m.reply(wait)
     try {
