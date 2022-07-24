@@ -28,13 +28,13 @@ ${watermark}`.trim()
     await conn.reply(m.chat, caption, m, { contextInfo: {
         externalAdReply: {
             sourceUrl: 'https://Instagram.com/asunabot',
-            title: 'Rules',
+            title: 'Reglas',
             body: 'Asuna',
             thumbnailUrl: global.image
         }
     }})
 }
-handler.command = /^(rules|snk|peraturan)$/i
+handler.command = /^(reglas|snk|peraturan)$/i
 handler.tags = ['main']
-handler.help = ['rules']
+handler.help = ['reglas']
 export default handler
