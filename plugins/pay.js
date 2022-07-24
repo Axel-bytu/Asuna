@@ -2,7 +2,7 @@
    
 let pajak = 0.02
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-  let fail = `perintah ini buat ngasih XP ke pengguna lain\n\ncontoh:\n${usedPrefix + command} @6285157336614 10\natau balas pesan doi dengan perintah: ${usedPrefix + command} 10`
+  let fail = `este comando para dar XP a otro usuario\n\nejemplo:\n${usedPrefix + command} @593962681710 10\ni responder a tu mensaje con el comando: ${usedPrefix + command} 10`
   let who
   if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender
   else who = m.chat
