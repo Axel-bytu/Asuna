@@ -6,10 +6,10 @@ let handler = async (m, { usedPrefix, command }) => {
     let fltr = split.map(v => '├ ' + v.nama).join('\n')
 
     m.reply(`
-┌──「 List pesan 」
+┌──「 Lista de mensajes 」
 ${fltr}
 └────
-Akses/ambil dengan mengetik namanya
+Acceder/obtener escribiendo el nombre
 `.trim())
 }
 handler.help = ['msg'].map(v => 'list' + v)
