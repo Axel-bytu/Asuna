@@ -3,12 +3,12 @@ const defaultLang = 'en'
 const tld = 'cn'
 
 let handler = async (m, { args, usedPrefix, command }) => {
-    let err = `Masukkan kode bahasa dan teks yang mau ditranslate.
+    let err = `Introduzca el código de idioma y el texto que desea traducir.
 
-Contoh:
+Ejemplo:
 ${usedPrefix + command} <lang> [text]
 ${usedPrefix + command} id your messages
-Daftar bahasa yang didukung: https://cloud.google.com/translate/docs/languages
+Lista de idiomas admitidos: https://cloud.google.com/translate/docs/languages
 `.trim()
 
     let lang = args[0]
