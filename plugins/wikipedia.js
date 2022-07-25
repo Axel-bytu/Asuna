@@ -1,6 +1,6 @@
 import { wikipedia } from '@bochilteam/scraper'
 let handler = async (m, { text, usedPrefix, command }) => {
-  if (!text) throw `Masukkan query yang ingin dicari.\n\nContoh: ${usedPrefix + command} Mao Zedong`
+  if (!text) throw `Ingrese la consulta que desea buscar.\n\nEjemplo: ${usedPrefix + command} Mao Zedong`
   let json = await wikipedia(text)
   m.reply(`
 *${json.title}*
