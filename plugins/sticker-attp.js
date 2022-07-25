@@ -1,6 +1,6 @@
-import fetch = require('node-fetch')
-import { sticker } = require('../lib/sticker')
-import { MessageType } = require('@adiwajshing/baileys')
+import fetch from ('node-fetch')
+import { sticker } from ('../lib/sticker')
+import { MessageType } from ('@adiwajshing/baileys')
 
 let handler = async (m, { conn, text, command }) => {
   let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text
