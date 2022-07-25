@@ -4,7 +4,7 @@ import fetch from 'node-fetch'
 
 let limit = 80
 let handler = async (m, { conn, args, isPrems, isOwner }) => {
-  if (!args || !args[0]) throw `Harap masukkan URL Youtube yang ingin di download!\n\nContoh: ${usedPrefix + command} https://youtu.be/zyJJlPSeEpo`
+  if (!args || !args[0]) throw `¡Ingrese la URL de Youtube que desea descargar!\n\nEjemplo: ${usedPrefix + command} https://youtu.be/zyJJlPSeEpo`
   let chat = db.data.chats[m.chat]
   const isY = /y(es)/gi.test(args[1])
   const { thumbnail, audio: _audio, title } = await youtubedl(args[0]).catch(async _ => await youtubedlv2(args[0])).catch(async _ => await youtubedlv3(args[0]))
@@ -28,19 +28,19 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
   }
   if ((!(source instanceof ArrayBuffer) || !link || !res.ok) && !isLimit) throw 'Error: ' + (lastError || 'Can\'t download audio')
   if (!isY && !isLimit) await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', `
-Judul: ${title}
-Filesize ${audio.fileSizeH}
+Título: ${title}
+Tamaño de archivo ${audio.fileSizeH}
 `.trim(), m, false, { contextInfo: {
   externalAdReply: {
     title: `${isLimit ? 'Click here to download' : 'Download via web'}`,
-    body: 'Haruno bot',
+    body: 'Asuna bot',
     thumbnailUrl: 'https://telegra.ph/file/37419ad0bce2a83dc6f5e.jpg',
     sourceUrl: link
   }
 }})
   if (!isLimit) await conn.sendFile(m.chat, source, title + '.mp3', `
-Judul: ${title}
-Filesize: ${audio.fileSizeH}
+Título: ${title}
+Tamaño de archivo: ${audio.fileSizeH}
 `.trim(), m, null, {
     mimetype: 'audio/mp4',
     asDocument: chat.useDocument
