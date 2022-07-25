@@ -1,13 +1,13 @@
-# Haruno
-<a href = "https://github.com/FadliDarmawan/haruno-md/blob/main/updatePatch/CHANGELOG"><img src = "https://telegra.ph/file/831188003a6180c72c38b.png">
+# Asuna
+<a href = "https://github.com/Axel-bytu/Asuna/blob/main/updatePatch/CHANGELOG"><img src = "https://telegra.ph/file/831188003a6180c72c38b.png">
 
 ## Version 3.0 is Out!
 Dont forget to read the changelog.
 
 <a href = "https://github.com/FadliDarmawan/haruno-md"><img src = "https://cardivo.vercel.app/api?name=Haruno&description=Haruno,%20Bot%20WhatsApp%20multi%20device.%20Created%20by%20Nurutomo,%20BochilGaming,%20dan%20FadliDarmawan.&image=https://telegra.ph/file/196b5f6f24ccdc6805021.jpg?cb=20200606024545&usqp=CAU&usqp=CAU&backgroundColor=%23ecf0f1&github=FadliDarmawan&pattern=topography&colorPattern=%23eaeaea"/><a>
 
-### Group Official Haruno
-[![Grup WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/Dqdjz7aSWJj0IyORAsdYom)
+### Group Official Asuna
+[![Grup WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/IJgzjrdBux28EJct7f1uxu)
 
 ### Deploy to Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/FadliDarmawan/haruno-md)
@@ -28,8 +28,8 @@ pkg install nodejs
 pkg install ffmpeg
 pkg install imagemagick
 pkg install yarn
-git clone https://github.com/FadliDarmawan/haruno-md
-cd haruno-md
+git clone https://github.com/Axel-bytu/Asuna
+cd Asuna
 yarn
 npm i -g typescript
 tsc -p ./node_modules/@adiwajshing/baileys
@@ -46,8 +46,8 @@ node .
 * Download And Install ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
 
 ```bash
-git clone https://github.com/FadliDarmawan/haruno-md
-cd haruno-md
+git clone https://github.com/Axel-bytu/Asuna
+cd Asuna
 npm install
 npm update
 npm index
@@ -164,7 +164,7 @@ conn.sendButton(m.chat, 'Hello world!', '@BochilGaming', 'https://github.com/Boc
 ---------
 
 
- [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo) | [![Istikmal](https://github.com/BochilGaming.png?size=150)](https://github.com/BochilGaming) | [![Fadli](https://github.com/FadliDarmawan.png?size=100)](https://github.com/FadliDarmawan)
+ [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo) | [![Istikmal](https://github.com/BochilGaming.png?size=150)](https://github.com/BochilGaming) | [![Fadli](https://github.com/FadliDarmawan.png?size=100)](https://github.com/FadliDarmawan) | [![Axel-bytu](https://github.com/Axel-bytu.png?size=100)](https://github.com/Axel-bytu)
 ----|----|----
-[Nurutomo](https://github.com/Nurutomo) | [Istikmal](https://github.com/BochilGaming) | [Fadli](https://github.com/FadliDarmawan)
+[Nurutomo](https://github.com/Nurutomo) | [Istikmal](https://github.com/BochilGaming) | [Fadli](https://github.com/FadliDarmawan) | [Axel-bytu](https://github.com/Axel-bytu)
  Penulis / Pencipta | SC owner | Pengembang ulang
