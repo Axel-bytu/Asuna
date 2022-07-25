@@ -4,7 +4,7 @@
 ## Version 3.0 is Out!
 Dont forget to read the changelog.
 
-<a href = "https://github.com/FadliDarmawan/haruno-md"><img src = "https://cardivo.vercel.app/api?name=Haruno&description=Haruno,%20Bot%20WhatsApp%20multi%20device.%20Created%20by%20Nurutomo,%20BochilGaming,%20dan%20FadliDarmawan.&image=https://telegra.ph/file/196b5f6f24ccdc6805021.jpg?cb=20200606024545&usqp=CAU&usqp=CAU&backgroundColor=%23ecf0f1&github=FadliDarmawan&pattern=topography&colorPattern=%23eaeaea"/><a>
+<a href = "https://github.com/Axel-bytu/Asuna"><img src = "https://cardivo.vercel.app/api?name=Asuna&description=Asuna,%20Bot%20WhatsApp%20multi%20device.%20Created%20by%20Nurutomo,%20BochilGaming,%20dan%20FadliDarmawan,%20dan%20Axel-bytu.&image=https://telegra.ph/file/196b5f6f24ccdc6805021.jpg?cb=20200606024545&usqp=CAU&usqp=CAU&backgroundColor=%23ecf0f1&github=Axel-bytu&pattern=topography&colorPattern=%23eaeaea"/><a>
 
 ### Group Official Asuna
 [![Grup WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/IJgzjrdBux28EJct7f1uxu)
@@ -164,7 +164,7 @@ conn.sendButton(m.chat, 'Hello world!', '@BochilGaming', 'https://github.com/Boc
 ---------
 
 
- [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo) | [![Istikmal](https://github.com/BochilGaming.png?size=150)](https://github.com/BochilGaming) | [![Fadli](https://github.com/FadliDarmawan.png?size=100)](https://github.com/FadliDarmawan) | [![Axel-bytu](https://github.com/Axel-bytu.png?size=100)](https://github.com/Axel-bytu)
-----|----|----
+ [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo) | [![Istikmal](https://github.com/BochilGaming.png?size=100)](https://github.com/BochilGaming) | [![Fadli](https://github.com/FadliDarmawan.png?size=100)](https://github.com/FadliDarmawan) | [![Axel-bytu](https://github.com/Axel-bytu.png?size=100)](https://github.com/Axel-bytu)
+----|----|----|----
 [Nurutomo](https://github.com/Nurutomo) | [Istikmal](https://github.com/BochilGaming) | [Fadli](https://github.com/FadliDarmawan) | [Axel-bytu](https://github.com/Axel-bytu)
- Penulis / Pencipta | SC owner | Pengembang ulang
+ Penulis / Pencipta | SC owner | Pengembang ulang | creator
