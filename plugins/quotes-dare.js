@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix }) => conn.sendButton(m.chat, await d
 ], m)
 
 handler.help = ['reto']
-handler.tags = ['quotes', 'fun']
+handler.tags = ['fun']
 handler.command = /^(reto)$/i
 
 export default handler
