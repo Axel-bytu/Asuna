@@ -1,5 +1,4 @@
-
-let { MessageType, Presence } = require('@adiwajshing/baileys')
+import { MessageType, Presence } from '@adiwajshing/baileys'
 let handler = async (m, { conn, text, participants }) => {
 	await conn.updatePresence(m.chat, Presence.composing) 
 	let member = participants.map(u => u.jid)
