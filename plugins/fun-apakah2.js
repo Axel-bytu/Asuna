@@ -5,8 +5,8 @@ let handler = async (m, { command, text }) => m.reply(`
   mentions: m.mentionedJid
 } : {})
 
-handler.help = ['apakah <teks>?']
-handler.tags = ['kerang', 'fun']
-handler.command = /^apakah$/i
+handler.help = ['preguntar <teks>?']
+handler.tags = ['fun']
+handler.command = /^preguntar$/i
 
 export default handler
