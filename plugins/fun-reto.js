@@ -1,6 +1,6 @@
 let handler  = async (m, { conn, usedPrefix, command }) => {
 //conn.reply(m.chat,`*┌────「 RETO 」─*\n*“${pickRandom(global.bucin)}”*\n*└────「 Mystic 」─*`, m)
-conn.sendHydrated(m.chat, `╭━━━━━[ 𝙍𝙀𝙏𝙊 😏 ]━━━━⬣\n*“${pickRandom(global.bucin)}”*\n╰━━━━━━[ ${watermark} ]━━━━━⬣`, null, [
+conn.sendHydrated(m.chat, `╭━━━━━[ 𝙍𝙀𝙏𝙊 😏 ]━━━━⬣\n*“${pickRandom(global.bucin)}”*\n╰━━━━━━[ ${watermark} ]━━━━━⬣`,null, md, null, null, [
 ['𝙊𝙩𝙧𝙖 𝙫𝙚𝙯 🧐', `${usedPrefix}reto`],
 ['𝙏𝙤𝙥𝙨 🏆', `${usedPrefix}top`]
 ], m,)}
