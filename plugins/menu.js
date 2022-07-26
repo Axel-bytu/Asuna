@@ -42,8 +42,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
     'xp': 'Exp & Limit',
     'sticker': 'Stiker',
     'anime': 'Anime',
-    'kerang': 'Kerang Ajaib',
-    'quotes': 'Quotes',
     'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`,
     'group': 'Grup',
     'premium': 'Premium',
@@ -54,11 +52,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
     'tools': 'Tools',
     'fun': 'Fun',
     'database': 'Database',
-    'vote': 'Voting',
-    'absen': 'Absen',
     'quran': 'Al Qur\'an',
     'audio': 'Pengubah Suara',
-    'jadibot': 'Jadi Bot',
     'info': 'Info',
     '': 'Tanpa Kategori',
   }
@@ -73,12 +68,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
   }
   if (teks == 'anime') tags = {
     'anime': 'Anime'
-  }
-  if (teks == 'kerangajaib') tags = {
-    'kerang': 'Kerang Ajaib'
-  }
-  if (teks == 'quotes') tags = {
-    'quotes': 'Quotes'
   }
   if (teks == 'admin') tags = {
     'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`
@@ -110,18 +99,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
   if (teks == 'database') tags = {
     'database': 'Database'
   }
-  if (teks == 'vote') tags = {
-    'vote': 'Voting',
-    'absen': 'Absen'
-  }
   if (teks == 'islamic') tags = {
     'islamic': 'Islamic'
   }
   if (teks == 'audio') tags = {
     'audio': 'Pengubah Suara'
-  }
-  if (teks == 'jadibot') tags = {
-    'jadibot': 'Jadi Bot'
   }
   if (teks == 'info') tags = {
     'info': 'Info'
@@ -228,130 +210,109 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
               "title": "─────「 5 」"
             }, {
               "rows": [{
-                "title": `Quotes`,
-                "description": "Menu para Quotes",
-                "rowId": `${_p}? quotes`
-              }],
-              "title": "─────「 7 」"
-            }, {
-              "rows": [{
                 "title": `Admin`,
                 "description": "Menú para Admins",
                 "rowId": `${_p}? admin`
               }],
-              "title": "─────「 8 」"
+              "title": "─────「 6 」"
             }, {
               "rows": [{
                 "title": `Grup`,
                 "description": "Menú para Grupo",
                 "rowId": `${_p}? group`
               }],
-              "title": "─────「 9 」"
+              "title": "─────「 7 」"
             }, {
               "rows": [{
                 "title": `Premium`,
                 "description": "Menú para Usuarios Premium",
                 "rowId": `${_p}? premium`
               }],
-              "title": "─────「 10 」"
+              "title": "─────「 8 」"
             }, {
               "rows": [{
                 "title": `Internet`,
                 "description": "Menu para navegar en Internet...",
                 "rowId": `${_p}? internet`
               }],
-              "title": "─────「 11 」"
+              "title": "─────「 9 」"
             }, {
               "rows": [{
                 "title": `Anonymous Chat`,
                 "description": "Menu para Anonymous Chat",
                 "rowId": `${_p}? anonymous`
               }],
-              "title": "─────「 12 」"
+              "title": "─────「 10 」"
             }, {
               "rows": [{
                 "title": `Nulis & Logo`,
                 "description": "Menu untuk Nulis & Logo",
                 "rowId": `${_p}? nulis`
               }],
-              "title": "─────「 13 」"
+              "title": "─────「 11 」"
             }, {
               "rows": [{
                 "title": `Downloader`,
                 "description": "Menu de descargas",
                 "rowId": `${_p}? downloader`
               }],
-              "title": "─────「 14 」"
+              "title": "─────「 12 」"
             }, {
               "rows":[{
                 "title": `Tools`,
                 "description": "Menu para Tools",
                 "rowId": `${_p}? tools`
               }],
-              "title": "─────「 15 」"
+              "title": "─────「 13 」"
             }, {
               "rows": [{
                 "title": `Fun`,
                 "description": "Menu Fun",
                 "rowId": `${_p}? fun`
               }],
-              "title": "─────「 16 」"
+              "title": "─────「 14 」"
             }, {
               "rows": [{
                 "title": `Database`,
                 "description": "Menu para Database",
                 "rowId": `${_p}? database`
               }],
-              "title": "─────「 17 」"
-            }, {
-              "rows": [{
-                "title": `Vote & Absen`,
-                "description": "Menu untuk Vote & Absen",
-                "rowId": `${_p}? vote`
-              }],
-              "title": "─────「 18 」"
+              "title": "─────「 15 」"
             }, {
               "rows": [{
                 "title": `Islamic`,
                 "description": "Menu Islamic",
                 "rowId": `${_p}? islamic`
               }],
-              "title": "─────「 19 」"
+              "title": "─────「 16 」"
             }, {
               "rows": [{
                 "title": `Pengubah Suara`,
                 "description": "Menú de cambiador de voz",
                 "rowId": `${_p}? audio`
               }],
-              "title": "─────「 20 」"
-            }, {
-              "rows": [{
-                "title":  `Jadi Bot`,
-                "description": "Numpang",
-                "rowId": `${_p}? jadibot`
-              }],
-              "title": "─────「 21 」"
+              "title": "─────「 17 」"
             }, {
               "rows": [{
                 "title": `Info`,
                 "description": "Menú de Información",
                 "rowId": `${_p}? info`
               }],
-              "title": "─────「 22 」"
+              "title": "─────「 18 」"
             }, {
               "rows": [{
                 "title": `Tanpa Kategori`,
                 "description": "Menú Sin Categorías",
                 "rowId": `${_p}? tanpakategori`
               }],
-              "title": "─────「 23 」"
+              "title": "─────「 19 」"
             }, {
               "rows": [{
                 "title":  `Owner Menu`,
                 "description": "Menú especial del Owner",
                 "rowId": `${_p}? owner`
               }],
-              "title": "─────「 24 」"
+              "title": "─────「 20 」"
             }
           ]
           const listMessage = {
