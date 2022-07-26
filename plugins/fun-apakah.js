@@ -5,9 +5,9 @@ let handler = async (m) => m.reply(`
   mentions: m.mentionedJid
 } : {})
 
-handler.help = ['apakah <teks>?']
-handler.tags = ['kerang', 'fun']
+handler.help = ['pregunta <teks>?']
+handler.tags = ['fun']
 handler.customPrefix = /(\?$)/
-handler.command = /^apakah$/i
+handler.command = /^pregunta$/i
 
 export default handler
