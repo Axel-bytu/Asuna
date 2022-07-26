@@ -1,8 +1,10 @@
-let handler = async (m, { conn, usedPrefix, command }) => {
-    conn.sendHydrated(m.chat, `╭━━━━━[ 𝙍𝙀𝙏𝙊 😏 ]━━━━⬣\n*“${pickRandom(global.bucin)}”*\n╰━━━━━━[ ${vs} ]━━━━━⬣`, conn.sendButton(m.chat, await dare(), null, md, 'watermark', null, null, [   
-    ['reto', `${usedPrefix}reto`], 
-    ['verdad', `${usedPrefix}verdad`]
-], m)}
+let handler  = async (m, { conn, usedPrefix, command }) => {
+//conn.reply(m.chat,`*┌────「 RETO 」─*\n*“${pickRandom(global.bucin)}”*\n*└────「 Mystic 」─*`, m)
+conn.sendHydrated(m.chat, `╭━━━━━[ 𝙍𝙀𝙏𝙊 😏 ]━━━━⬣\n*“${pickRandom(global.bucin)}”*\n╰━━━━━━[ ${vs} ]━━━━━⬣`, wm, null, md, '𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿', null, null, [
+['𝙊𝙩𝙧𝙖 𝙫𝙚𝙯 🧐', `${usedPrefix}reto`],
+['𝙏𝙤𝙥𝙨 🏆', `${usedPrefix}top`],
+['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', `${usedPrefix}menu`]
+], m,)}
 
 handler.help = ['reto']
 handler.tags = ['fun']
