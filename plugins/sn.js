@@ -1,4 +1,4 @@
-const { createHash } = require('crypto')
+import { createHash } from 'crypto'
 let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 let handler = async function (m, { text, usedPrefix }) {
 let user = global.DATABASE._data.users[m.sender]
