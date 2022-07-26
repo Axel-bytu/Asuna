@@ -1,4 +1,4 @@
-let { Presence, GroupSettingChange } = require('@adiwajshing/baileys')
+import { Presence, GroupSettingChange } from '@adiwajshing/baileys'
 let handler  = async (m, { conn, args, usedPrefix, command }) => {
 	let isClose = { // Switch Case Like :v
 		'open': false,
@@ -7,7 +7,7 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
 	await conn.updatePresence(m.chat, Presence.composing)
 	if (isClose === undefined)
 		throw `
-*ғᴏʀᴍᴀᴛ ᴡʀᴏɴɢ! ᴇxᴀᴍᴘʟᴇ :*
+*Forma de uso:*
   *○ ${usedPrefix + command} close*
   *○ ${usedPrefix + command} open*
 `.trim()
