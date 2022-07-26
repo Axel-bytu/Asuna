@@ -7,23 +7,30 @@ import fetch from 'node-fetch'
 import moment from 'moment-timezone'
 const defaultMenu = {
   before: `
-┌──「 *%me* 」
-├ Hola, *%name!*
-├ %time
-│
-├ *%watermark*
-└───
+╭════〘 *%me* 〙═══⊷❍➣
+┃%emos *Hola👋* : \`\`\`%name\`\`\`
+┃%emos *Role🔋* : \`\`\`%role\`\`\`
+┃%emos *Nivel🎚️* : \`\`\`%level (%exp / %maxexp))\`\`\`
+┃%emos \`\`\`%totalexp xp en  Total\`\`\`
+┃%emos *Límite* : %limit Limit
+┃%emos *Fecha📆* : \`\`\`%week, %date\`\`\`
+┃%emos *Hora⌚* : \`\`\`%time\`\`\`
+┃%emos *Timpo activo♨️* : \`\`\`%uptime (%muptime)\`\`\`
+┃%emos *Registro🗃️* : \`\`\`%rtotalreg of %totalreg\`\`\`
+┃%emos *%watermark*
+╰════════════════⊷❍➣
 
 *Instagram*:
 \`\`\`https://instagram.com/axelcagua\`\`\`
 
 %readmore`.trimStart(),
-  header: '┌──「 %category 」',
-  body: '├ %cmd %islimit %isPremium',
-  footer: '└───\n',
+  header: '╭════〘 *%category* 〙═⊷❍➣\n┃%emos',
+  body: '```┃%emos %cmd %islimit %isPremium```',
+  footer: '┃%emos\n╰═════════════⊷❍➣',
   after: ``,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
+ conn.fakeReply(m.chat,  '*ESPERA⏳...*', '0@s.whatsapp.net', '*💫Asuna🔥*') 
   let tags
   let teks = `${args[0]}`.toLowerCase()
   let arrayMenu = ['all', 'game', 'xp', 'stiker', 'anime', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'islamic', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
@@ -142,6 +149,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
     // Offset    0 is  0.00
     // Offset  420 is  7.00
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
+    let emos = ['✰', '✧', '✞︎', '✘', '✩'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
     let date = d.toLocaleDateString(locale, {
       day: 'numeric',
