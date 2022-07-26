@@ -5,7 +5,7 @@ let handler = async (m, { conn, usedPrefix, command }) => conn.sendButton(m.chat
 ], m)
 
 handler.help = ['bucin']
-handler.tags = ['quotes']
+handler.tags = ['fun']
 handler.command = /^(bucin)$/i
 
 export default handler
