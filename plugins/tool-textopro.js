@@ -1,5 +1,5 @@
-let fetch = require('node-fetch')
-let split = '.'
+import fetch from 'node-fetch'
+import split from '.'
 if(!split) throw 'effect not found'
 let handler = async (m, { conn, args: [effect], usedPrefix, text: txt }) => {
   let { effects } = await (await (fetch(global.API('xteam', '/textpro')))).json()
