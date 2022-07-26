@@ -8,25 +8,25 @@ import moment from 'moment-timezone'
 const defaultMenu = {
   before: `
 ╭════〘 *%me* 〙═══⊷❍➣
-┃%emos *Hola👋* : \`\`\`%name\`\`\`
-┃%emos *Role🔋* : \`\`\`%role\`\`\`
-┃%emos *Nivel🎚️* : \`\`\`%level (%exp / %maxexp))\`\`\`
-┃%emos \`\`\`%totalexp xp en  Total\`\`\`
-┃%emos *Límite* : %limit Limit
-┃%emos *Fecha📆* : \`\`\`%week, %date\`\`\`
-┃%emos *Hora⌚* : \`\`\`%time\`\`\`
-┃%emos *Timpo activo♨️* : \`\`\`%uptime (%muptime)\`\`\`
-┃%emos *Registro🗃️* : \`\`\`%rtotalreg of %totalreg\`\`\`
-┃%emos *%watermark*
+┃✧ *Hola👋* : \`\`\`%name\`\`\`
+┃✧ *Role🔋* : \`\`\`%role\`\`\`
+┃✧ *Nivel🎚️* : \`\`\`%level (%exp / %maxexp))\`\`\`
+┃✧ \`\`\`%totalexp xp en  Total\`\`\`
+┃✧ *Límite* : %limit Limit
+┃✧ *Fecha📆* : \`\`\`%week, %date\`\`\`
+┃✧ *Hora⌚* : \`\`\`%time\`\`\`
+┃✧ *Timpo activo♨️* : \`\`\`%uptime (%muptime)\`\`\`
+┃✧ *Registro🗃️* : \`\`\`%rtotalreg of %totalreg\`\`\`
+┃✧ *%watermark*
 ╰════════════════⊷❍➣
 
 *Instagram*:
 \`\`\`https://instagram.com/axelcagua\`\`\`
 
 %readmore`.trimStart(),
-  header: '╭════〘 *%category* 〙═⊷❍➣\n┃%emos',
-  body: '```┃%emos %cmd %islimit %isPremium```',
-  footer: '┃%emos\n╰═════════════⊷❍➣',
+  header: '╭════〘 *%category* 〙═⊷❍➣\n┃✧',
+  body: '```┃✧ %cmd %islimit %isPremium```',
+  footer: '┃✧\n╰═════════════⊷❍➣',
   after: ``,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
@@ -149,7 +149,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
     // Offset    0 is  0.00
     // Offset  420 is  7.00
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
-    let emos = ['✰', '✧', '✞︎', '✘', '✩'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
     let date = d.toLocaleDateString(locale, {
       day: 'numeric',
