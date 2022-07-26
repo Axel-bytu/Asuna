@@ -37,7 +37,7 @@ conn.sendFile(m.chat, pp, 'pp.jpg', verif, m, false)
 }
 }
 handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <name>.<age>')
-handler.tags = ['exp']
+handler.tags = ['info']
 
 handler.command = /^(daftar|reg(ister)?)$/i
 
