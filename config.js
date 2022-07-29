@@ -36,6 +36,7 @@ global.author = 'Kirito'
 // Haruno global
 global.image = 'https://github.com/Axel-bytu/Asuna/blob/main/media/Asuna.jpg'
 global.watermark = '© Asuna'
+global.kt = '© Kirito'
 global.wait = '「 ⏱️ 」Espera por favor...'
 global.multiplier = 59 // The higher, The harder levelup
 global.source = 'https://youtu.be/pgCNibhSYsY'
