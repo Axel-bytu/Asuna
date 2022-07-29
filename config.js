@@ -34,7 +34,7 @@ global.packname = 'Asuna'
 global.author = 'Kirito'
 
 // Haruno global
-global.image = 'https://github.com/Axel-bytu/Asuna/blob/main/media/Asuna.jpg'
+global.image = 'https://telegra.ph/file/f96d9fdebba8eaa08ba7b.jpg'
 global.watermark = '© Asuna'
 global.kt = '© Kirito'
 global.wait = '「 ⏱️ 」Espera por favor...'
