@@ -28,7 +28,7 @@ conn.sendHydrated(m.chat, `𝘼𝙃𝙊𝙍𝘼 𝙏𝙄𝙀𝙉𝙀 𝙀𝙇 �
 ], m)
 }}
 handler.help = ['*593xxx*','*@usuario*','*responder chat*'].map(v => 'promote ' + v)
-handler.tags = ['group']
+handler.tags = ['admin']
 handler.command = /^(promote|daradmin|darpoder)$/i
 handler.group = true
 handler.admin = true
