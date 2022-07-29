@@ -31,7 +31,7 @@ let str =
 ┃ *${sn}*`
 conn.sendButton(m.chat, str, wm, await(await fetch(pp)).buffer(), [['𝙑𝙚𝙧𝙞𝙛𝙞𝙘𝙖𝙧', '/verificar ✅'], ['𝙌𝙪𝙚 𝙚𝙢𝙥𝙞𝙚𝙘𝙚 𝙡𝙖 𝙖𝙫𝙚𝙣𝙩𝙪𝙧𝙖!! 😎', '/menu']], m)
 }}
-handler.help = ['profile [@user]']
+handler.help = ['perfil [@user]']
 handler.tags = ['xp']
 handler.command = /^perfil|profile?$/i
 export default handler
