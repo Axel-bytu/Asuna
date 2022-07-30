@@ -1,24 +1,16 @@
 import util from 'util'
 import path from 'path'
 
-let handler  = async (m, { conn }) => {
-
-       conn.sendFile(m.chat, 'media/A Bueno adiós master.mp3', '', 'Bueno master', m)
-
+let handler = async (m, { conn }) => {
+if (!db.data.chats[m.chat].audios && m.isGroup) throw 0
+db.data.users[m.sender].exp += 100
+  
+let vn = './media/A bueno adios master.mp3'
+conn.sendFile(m.chat, vn, 'A bueno adios master.mp3', null, m, true, {
+type: 'audioMessage', 
+ptt: true 
+})
 }
-
-handler.help = ['Bueno master']
-handler.tags = ['categoria']
-handler.command = /^(A Bueno master|Bueno master|Bueno Máster|🫂)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
-handler.admin = true
-handler.botAdmin = false
-handler.fail = null
-handler.limit = false
-handler.exp = 100
-module.exports = handler
-
+handler.customPrefix = /A Bueno master|Bueno master|Bueno Máster|🫂/i 
+handler.command = new RegExp
+export default handler 
