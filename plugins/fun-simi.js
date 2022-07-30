@@ -9,5 +9,5 @@ conn.sendHydrated(m.chat, `${tes}`, m)
 }
 handler.help = ['asuna']
 handler.tags = ['fun']
-handler.command = ['bot', 'simi', 'simsimi', 'alexa', 'bixby', 'cortana', 'siri', 'okgoogle']
+handler.command = ['asuna', 'bot', 'simi', 'simsimi', 'alexa', 'bixby', 'cortana', 'siri', 'okgoogle']
 export default handler
