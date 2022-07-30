@@ -3,7 +3,7 @@ import path from 'path'
 
 let handler  = async (m, { conn }) => {
 
-       conn.sendFile(m.chat, 'media/A Bueno master.mp3', '', 'Bueno master', m)
+       conn.sendFile(m.chat, 'media/A Bueno adiós master.mp3', '', 'Bueno master', m)
 
 }
 
