@@ -13,4 +13,5 @@ ptt: true
 }
 handler.customPrefix = /Buen día grupo|Buen dia grupo|🙌/i 
 handler.command = new RegExp
+handler.group = true
 export default handler
