@@ -12,4 +12,5 @@ ptt: true
 }
 handler.customPrefix = /Calla Fan de bts/i 
 handler.command = new RegExp
+handler.group = true
 export default handler
