@@ -1,5 +1,5 @@
 let handler  = async (m, { conn, usedPrefix }) => {
-conn.sendHydrated(m.chat, `╭━━━━[ 𝙑𝙀𝙍𝘿𝘼𝘿 🤔 ]━━━━⬣\n*“${pickRandom(global.bucin)}”*\n╰━━━━━━[ ${watermark} ]━━━━━⬣`, m,)}
+conn.reply(m.chat, `╭━━━━[ 𝙑𝙀𝙍𝘿𝘼𝘿 🤔 ]━━━━⬣\n*“${pickRandom(global.bucin)}”*\n╰━━━━━━[ ${watermark} ]━━━━━⬣`, m,)}
 
 handler.help = ['verdad']
 handler.tags = ['fun']
