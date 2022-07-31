@@ -13,4 +13,5 @@ ptt: true
 }
 handler.customPrefix = /A Bueno master|Bueno master|Bueno Máster|🫂/i 
 handler.command = new RegExp
+handler.group = true
 export default handler 
