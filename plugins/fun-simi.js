@@ -1,10 +1,19 @@
 import fetch from 'node-fetch'
-let handler = async (m, { text, usedPrefix, command }) => {
-if (!text) throw `𝙀𝙎𝘾𝙍𝙄𝘽𝘼 𝙐𝙉 𝙏𝙀𝙓𝙏𝙊 𝙋𝘼𝙍𝘼 𝙃𝘼𝘽𝙇𝘼𝙍 𝘾𝙊𝙉𝙈𝙄𝙂𝙊\n\n𝙀𝙅𝙀𝙈𝙋𝙇𝙊\n*${usedPrefix + command} Hola Asuna Bot*`
-let res = await fetch(global.API('https://api-sv2.simsimi.net', '/v2/', { text: encodeURIComponent(text), lc: "es" }, ''))
-let json = await res.json()
-if (json.success) m.reply(json.success)
-  else throw json
+let handler = m => m
+
+handler.before = async (m) => {
+    let chat = global.db.data.chats[m.chat]
+    if (chat.simi && !chat.isBanned && !m.isGroup) {
+        if (/^.*false|disnable|(turn)?off|0/i.test(m.text)) return
+        if (!m.text) return
+        let res = await fetch(global.API('rey', '/api/fun/simsimi.net/v2/?', { text: encodeURIComponent(m.text) }, 'apikey'))
+        if (!res.ok) return m.reply(eror)
+        let json = await res.json()
+        if (json.result == 'Aku tidak mengerti apa yang kamu katakan.Tolong ajari aku.') await m.reply('siminya blom diajarin, ajarin di https://simsimi.com/teach')
+        else await m.reply(`*Simi:* ${json.result}`)
+        return !0
+    }
+    return true
 }
 handler.help = ['asuna']
 handler.tags = ['fun']
