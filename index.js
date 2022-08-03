@@ -14,7 +14,7 @@ const { name, author } = require(join(__dirname, './package.json')) // https://w
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
-say('Haruno', {
+say('Asuna', {
   font: 'block',
   align: 'center',
   colors: ['#a8c3bc'] 
