@@ -10,7 +10,7 @@ type: 'audioMessage',
 ptt: true 
 })
 }
-handler.customPrefix = /bot|bonito|bosita/i 
+handler.customPrefix = /bot|botsita|Bot/i 
 handler.command = new RegExp
 handler.group = true
 export default handler
